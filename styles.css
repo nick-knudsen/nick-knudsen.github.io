@@ -1,3 +1,8 @@
+:root {
+    --global-background-color: #222;
+}
+
+
 html {
     height: 100%;
 }
@@ -10,53 +15,11 @@ body {
     margin: 0;
 
     font-family: 'Space Mono', serif;
-    background-color: #222;
+    background-color: var(--global-background-color);
     /* border: 2px dashed white; */
 }
 
-header {
-    width: 100%;
-    position: fixed;
-    margin-top: -1.5em;
-    font-size: 1.25em;
-    border: inherit;
-}
 
-nav {
-    width: 100%;
-    display: flex;
-    background-color: transparent;
-    border: inherit;
-}
-
-nav > ul {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-
-    list-style-type: none;
-    border:inherit;
-}
-
-nav li {
-    padding: 1em;
-    text-align: center;
-    border: inherit;
-}
-
-nav > ul > #home {
-    margin-right: auto;
-    margin-left: -2em;
-}
-
-nav li:hover {
-    background-color: rgba(1,1,1,0.25);
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-}
 
 .hero-image {
     width: 100%;
@@ -66,7 +29,7 @@ nav a {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(transparent 0%, transparent 70%, #222 100%), url("images/hero_home.jpg");
+    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("images/hero_home.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;   
@@ -77,6 +40,7 @@ nav a {
     padding-bottom: 15vw;
 
     text-align: center;
+    font-size: 1.1em;
     color: black;
 }
 

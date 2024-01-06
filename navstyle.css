@@ -1,0 +1,43 @@
+header {
+    width: 100%;
+    position: fixed;
+    margin-top: -1.5em;
+    font-size: 1.25em;
+    border: inherit;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    border: inherit;
+}
+
+nav > ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    list-style-type: none;
+    border:inherit;
+}
+
+nav li {
+    padding: 1em;
+    text-align: center;
+    border: inherit;
+}
+
+nav > ul > #home {
+    margin-right: auto;
+    margin-left: -2em;
+}
+
+nav li:hover {
+    background-color: rgba(1,1,1,0.25);
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
