@@ -1,0 +1,20 @@
+:root {
+    --global-background-color: #222;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    font-family: 'Space Mono', serif;
+    background-color: var(--global-background-color);
+    /* border: 2px dashed white; */
+}

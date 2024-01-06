@@ -91,16 +91,16 @@ div.work-icon {
     display:flex;
     flex-direction: column;
     text-align: center;
+    margin: 3%;
 }
 
-div.work-icon > img {
+div.work-icon > a > img {
     max-width: 100%;
-    margin: 10%;
     border-radius: 50%;
     transition: transform 0.5s ease;
 }
 
-div.work-icon > img:hover {
+div.work-icon > a > img:hover {
     transform: scale(1.1);
 }
 
