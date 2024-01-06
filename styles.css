@@ -66,7 +66,7 @@ nav a {
     justify-content: center;
     align-items: center;
 
-    background-image: url("images/hero_home.jpg");
+    background: linear-gradient(transparent 0%, transparent 70%, #222 100%), url("images/hero_home.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;   
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-div.hero-text > h3 {
+div.hero-text > h2 {
     font-size: 3vw;
     margin-top: 5vw;
     margin-bottom: -2vw;
@@ -114,4 +114,29 @@ div.hero-text > button {
 
 div.hero-text > button:hover {
     transform: scale(1.2);
+}
+
+div.my-work {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.work-icon {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+div.work-icon > img {
+    max-width: 100%;
+    margin: 10%;
+    border-radius: 50%
+}
+
+div.work-icon > h3 {
+    font-family: "Tenor Sans";
+    color: white;
+    font-size: 1.75em;
 }
