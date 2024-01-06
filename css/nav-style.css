@@ -13,13 +13,13 @@ nav {
     border: inherit;
 }
 
-nav > ul {
+nav>ul {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-
+    background: linear-gradient(white 0%, transparent 100%);
     list-style-type: none;
-    border:inherit;
+    border: inherit;
 }
 
 nav li {
@@ -28,17 +28,39 @@ nav li {
     border: inherit;
 }
 
-nav > ul > #home {
+nav>ul>#home {
     margin-right: auto;
     margin-left: -2em;
 }
 
 nav li:hover {
-    background-color: rgba(1,1,1,0.25);
+    background-color: rgba(1, 1, 1, 0.25);
 }
 
 nav a {
     text-decoration: none;
     font-family: "Space Mono", sans-serif;
     color: black;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer>ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    color: white;
+}
+
+footer>ul>li:first-child {
+    margin-right: auto;
+}
+
+footer>ul .fa {
+    color: white;
+    margin-right: 1em;
 }

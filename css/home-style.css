@@ -19,8 +19,6 @@ body {
     /* border: 2px dashed white; */
 }
 
-
-
 .hero-image {
     width: 100%;
     height: auto;
@@ -32,7 +30,7 @@ body {
     background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_home.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;   
+    background-size: cover;
 }
 
 .hero-text {
@@ -44,29 +42,34 @@ body {
     color: black;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: black;
     font-family: 'Tenor Sans';
     font-weight: 600;
 }
 
-div.hero-text > h2 {
+div.hero-text>h2 {
     font-size: 3vw;
     margin-top: 5vw;
     margin-bottom: -2vw;
 }
 
-div.hero-text > h1 {
+div.hero-text>h1 {
     font-size: 6vw;
     margin-bottom: 0;
 }
 
-div.hero-text > p {
+div.hero-text>p {
     font-size: 100%;
 }
-div.hero-text > button {
+
+div.hero-text>button {
     background-color: black;
-    color: white;
     border: none;
     font-family: inherit;
     font-size: 1em;
@@ -76,7 +79,13 @@ div.hero-text > button {
     transition-duration: 0.4s;
 }
 
-div.hero-text > button:hover {
+div.hero-text>button>a {
+    color: white;
+    text-decoration: none;
+}
+
+
+div.hero-text>button:hover {
     transform: scale(1.2);
 }
 
@@ -88,23 +97,23 @@ div.my-work {
 }
 
 div.work-icon {
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
     margin: 3%;
 }
 
-div.work-icon > a > img {
+div.work-icon>a>img {
     max-width: 100%;
     border-radius: 50%;
     transition: transform 0.5s ease;
 }
 
-div.work-icon > a > img:hover {
+div.work-icon>a>img:hover {
     transform: scale(1.1);
 }
 
-div.work-icon > h3 {
+div.work-icon>h3 {
     font-family: "Tenor Sans";
     color: white;
     font-size: 1.75em;
