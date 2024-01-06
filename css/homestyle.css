@@ -29,7 +29,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("images/hero_home.jpg");
+    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_home.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;   
@@ -96,7 +96,12 @@ div.work-icon {
 div.work-icon > img {
     max-width: 100%;
     margin: 10%;
-    border-radius: 50%
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+div.work-icon > img:hover {
+    transform: scale(1.1);
 }
 
 div.work-icon > h3 {

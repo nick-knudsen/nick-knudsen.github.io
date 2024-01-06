@@ -39,5 +39,6 @@ nav li:hover {
 
 nav a {
     text-decoration: none;
+    font-family: "Space Mono", sans-serif;
     color: black;
 }
