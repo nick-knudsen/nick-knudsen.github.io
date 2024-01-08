@@ -100,10 +100,13 @@ div.hero-text>p {
     top: 0;
     height: 100vh;
     color: white;
-
 }
 
+.parallax-section h2 {
+    margin-top: auto;
+}
 .parallax-section nav {
+    margin-top: auto;
     display: flex;
     justify-content: center;
     width: 100%;
