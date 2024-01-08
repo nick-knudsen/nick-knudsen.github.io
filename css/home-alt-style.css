@@ -74,36 +74,88 @@ div.hero-text>p {
 .parallax-section {
     position: relative;
     height: 300vh;
-    overflow: hidden;
     display: flex;
 }
 
-.sticky-left {
+.sticky-half-left {
     width: 50%;
     position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: 0;
-    height: 100%;
-    background-color: #3498db; /* Adjust the background color as needed */
-    color: white; /* Adjust text color as needed */
+    height: 100vh;
+    color: white;
+
 }
 
-.scrolling-right {
+.sticky-half-right {
     width: 50%;
-    position: absolute;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100vh;
+    color: white;
+
+}
+
+.parallax-section nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.parallax-section nav > ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.parallax-section nav li {
+    padding: 0.5em;
+}
+
+.parallax-section nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.scrolling-half-left {
+    width: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scrolling-half-right {
+    width: 50%;
+    position: relative;
     top: 0;
     right: 0;
     height: 100%;
     overflow: hidden;
 }
 
-/* Apply parallax effect to the right side */
-.scrolling-right:before {
+.scrolling-half-left:before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%; /* Adjust the value for more or less parallax effect */
+    /* width: 50%; */
+    height: 300%; /* Adjust the value for more or less parallax effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.scrolling-half-right:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 300%; /* Adjust the value for more or less parallax effect */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -115,6 +167,11 @@ div.hero-text>p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#about > .scrolling-half-right {
+    background-color: #ccc;
+    color: black;
 }
 
 #cocktails {
