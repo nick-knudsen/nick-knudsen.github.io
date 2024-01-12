@@ -4,16 +4,13 @@
 
 html, body {
     height: 100%;
-    /* scroll-behavior: smooth; */
     margin: 0;
     padding: 0;
 }
 
 body {
-
     font-family: 'Space Mono', serif;
     background-color: var(--global-background-color);
-    /* border: 2px dashed white; */
 }
 
 .hero-image {
@@ -93,8 +90,9 @@ div.hero-text>p {
 
 .parallax-section h2 {
     margin-top: auto;
-    font-size: 3em;
+    font-size: 4em;
     color:white;
+    margin-bottom: 0.25em;
 }
 
 .parallax-section button {
@@ -130,8 +128,9 @@ div.hero-text>p {
     display: flex;
 }
 
-.parallax-section nav li {
-    padding: 0.5em;
+.parallax-section nav li:not(:last-child)::after {
+    content: "/";
+    margin: 1em;
 }
 
 .parallax-section nav a {

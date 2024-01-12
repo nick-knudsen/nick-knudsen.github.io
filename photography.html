@@ -17,7 +17,7 @@
     <header>
         <nav>
             <ul>
-                <li id="home"><a href="/home.html">Home</a></li>
+                <li id="home"><a href="/index.html">Home</a></li>
                 <li><a href="/cocktails.html">Cocktails</a></li>
                 <li><a href="/code.html">Code</a></li>
                 <li><a href="/photography.html">Photography</a></li>
@@ -26,8 +26,22 @@
         </nav>
     </header>
 
+    <div class="carousel-wrapper">
+        <button class="left">&#10094;</button>
+        <div class="carousel">
+            <div class="slide">
+                <img src="images/photography_home_1.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/photography_home_2.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/photography_home_3.jpg">
+            </div>
+        </div>
+        <button class="right">&#10095;</button>
+    </div>
 
-    
     <footer>
         <ul>
             <li>&copy; 2024 Nick Knudsen</li>
@@ -37,6 +51,38 @@
             <li><a href="mailto:nick.knudsen14@gmail.com" class="fa fa-envelope-o"></a></li>
         </ul>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            let carousel = document.querySelector('.carousel');
+            let left = document.querySelector('.left');
+            let right = document.querySelector('.right');
+            let item = document.querySelector('.slide');
+            let slideIndex = 0;
+
+            right.addEventListener('click', function (e) {
+                slideIndex++
+                if (slideIndex >= carousel.children.length) {
+                    slideIndex = 0;
+                }
+                updateCarousel();
+            });
+
+            left.addEventListener('click', function () {
+                slideIndex--;
+                if (slideIndex < 0) {
+                    slideIndex = carousel.children.length - 1;
+                }
+                updateCarousel();
+            });
+
+            function updateCarousel() {
+                carousel.scrollLeft = slideIndex * item.clientWidth;
+            }
+        });
+    </script>
+
 </body>
 
 </html>
