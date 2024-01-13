@@ -60,6 +60,7 @@
             let right = document.querySelector('.right');
             let item = document.querySelector('.slide');
             let slideIndex = 0;
+            let shouldAutoAdvance = true;
 
             right.addEventListener('click', function (e) {
                 slideIndex++
@@ -67,6 +68,7 @@
                     slideIndex = 0;
                 }
                 updateCarousel();
+                resetAutoAdvanceTimer();
             });
 
             left.addEventListener('click', function () {
@@ -75,11 +77,31 @@
                     slideIndex = carousel.children.length - 1;
                 }
                 updateCarousel();
+                resetAutoAdvanceTimer();
             });
 
             function updateCarousel() {
                 carousel.scrollLeft = slideIndex * item.clientWidth;
             }
+
+            function resetAutoAdvanceTimer() {
+                shouldAutoAdvance = false;
+                setTimeout(function () {
+                    shouldAutoAdvance = true;
+                }, 10000);
+            }
+
+            function autoAdvance() {
+                if (shouldAutoAdvance) {
+                    slideIndex++;
+                    if (slideIndex >= carousel.children.length) {
+                        slideIndex = 0;
+                    }
+                    updateCarousel();
+                }
+            }
+
+            setInterval(autoAdvance, 10000);
         });
     </script>
 
