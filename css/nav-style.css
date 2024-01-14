@@ -27,6 +27,7 @@ header >nav li {
     padding: 1em;
     text-align: center;
     border: inherit;
+    transition: ease-in-out 0.3s;
 }
 
 header>nav>ul>#home {

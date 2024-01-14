@@ -23,7 +23,6 @@ h1 {
     font-family: 'Tenor Sans', serif;
     color: white;
     font-size: 5em;
-    z-index: 3;
 }
 
 .carousel-wrapper {
@@ -37,8 +36,7 @@ h1 {
 
 .carousel-wrapper h1 {
     position: absolute;
-    opacity: 0.8;
-
+    opacity: 0.9;
 }
 
 .carousel {
@@ -82,13 +80,13 @@ h1 {
     align-self: center;
     font-size: 2em;
     padding: 1em 0.5em 1em 0.5em;
+    transition: ease-in-out 0.5s;
     z-index: 3;
 }
 
 .left:hover,
 .right:hover {
     background-color: rgba(0,0,0,0.5);
-    transition: ease-in-out 0.5s;
 }
 
 .left {
