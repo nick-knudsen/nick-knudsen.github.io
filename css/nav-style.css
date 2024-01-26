@@ -10,7 +10,6 @@ header {
 header > nav {
     width: 100%;
     display: flex;
-    background-color: transparent;
     border: inherit;
 }
 
@@ -18,7 +17,6 @@ header >nav>ul {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    /* background: linear-gradient(white 0%, transparent 100%); */
     list-style-type: none;
     border: inherit;
 }
@@ -36,13 +34,12 @@ header>nav>ul>#home {
 }
 
 header>nav li:hover {
-    background-color: rgba(1, 1, 1, 0.25);
+    background: linear-gradient(rgba(1, 1, 1, 0.25), transparent);
 }
 
 header>nav a {
     text-decoration: none;
     font-family: "Space Mono", sans-serif;
-    color: white;
 }
 
 footer {

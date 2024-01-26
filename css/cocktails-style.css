@@ -3,17 +3,121 @@
 }
 
 
-html {
+html,
+body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    height: 100%;
     display: flex;
     flex-direction: column;
 
-    margin: 0;
 
     font-family: 'Space Mono', serif;
     background-color: var(--global-background-color);
+}
+
+header > nav > ul {
+    background: linear-gradient(rgba(255,255,255,1), transparent)
+}
+
+nav a {
+    color: black;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    padding-top: 10vw;
+    padding-bottom: 15vw;
+
+    text-align: center;
+    font-size: 1.1em;
+    color: black;
+}
+
+.hero-text h1 {
+    font-family: Tenor Sans;
+}
+
+div.hero-text>h1 {
+    margin-top: 10vw;
+    font-size: 6vw;
+    margin-bottom: 0;
+}
+
+div.hero-text>p {
+    font-size: 100%;
+}
+
+.fa-arrow-circle-down {
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.gallery-container {
+    display: flex;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1%;
+    list-style-type: none;
+}
+
+.image-gallery>li {
+    height: 550px;
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.image-gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.image-gallery li .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.5s;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    font-size: 2em;
+    z-index: 1;
+}
+
+.image-gallery li:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.image-gallery::after {
+    content: "";
+    flex-grow: 999;
 }
