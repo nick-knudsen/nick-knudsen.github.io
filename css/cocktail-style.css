@@ -1,0 +1,77 @@
+:root {
+    --global-background-color: #222;
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Space Mono', serif;
+    background-color: var(--global-background-color);
+}
+
+header>nav>ul {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent 100%);
+}
+
+nav a {
+    color: white;
+}
+
+h1,
+h2 {
+    font-family: 'Tenor Sans', serif;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    padding-top: 14vw;
+    padding-bottom: 15vw;
+
+    text-align: center;
+    font-size: 1.1em;
+    color: black;
+}
+
+div.hero-text>h2 {
+    font-size: 3vw;
+    margin-top: 5vw;
+    margin-bottom: -2vw;
+}
+
+div.hero-text>h1 {
+    font-size: 6vw;
+    margin-bottom: 0;
+}
+
+div.hero-text>p {
+    font-size: 100%;
+}
+
+.fa-arrow-circle-down {
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+}
