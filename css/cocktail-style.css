@@ -72,5 +72,6 @@ div.hero-text>p {
 .fa-arrow-circle-down {
     color: white;
     font-size: 2em;
+    margin-top: 0.5em;
     text-decoration: none;
 }
