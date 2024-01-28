@@ -25,15 +25,19 @@
         </nav>
     </header>
 
-    <div class="hero-image">
+    <div class="hero-image" id="fuji">
         <div class="hero-text">
-            <h2>HELLO, I AM</h2>
-            <h1 id="name">NICK KNUDSEN</h1>
-            <p>I make cocktails, write code, take photos, and more</p>
-            <a href="#about" class="scroll-down-button">
+            <h1>IT'S SNOWING</h1>
+            <h1 id="name">ON MT. FUJI</h1>
+            <p>A savory martini riff highlighting Japanese botanicals</p>
+            <a href="#spec" class="scroll-down-button">
                 <i class='fas fa-arrow-circle-down'></i>
             </a>
         </div>
+    </div>
+    
+    <div class="spec" id="spec">
+        <p>The specs</p>
     </div>
 
     <footer>
@@ -46,6 +50,44 @@
             <li><a href="mailto:nick.knudsen14@gmail.com" class="fa fa-envelope-o"></a></li>
         </ul>
     </footer>
+
+    <script>
+        function scrollToElement(elementId, duration) {
+            const targetElement = document.getElementById(elementId);
+            const targetPosition = targetElement.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const startTime = performance.now();
+
+            function animate(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+                window.scrollTo(0, startPosition + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t ** 3 : 1 - ((-2 * t + 2) ** 3) / 2;
+        }
+
+        // Add smooth scrolling to all links with class "smooth-scroll"
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToElement(targetId, 1500);
+            });
+        });
+    </script>
 </body>
 
 </html>
