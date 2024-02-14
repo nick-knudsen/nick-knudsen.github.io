@@ -5,7 +5,7 @@
 
 html,
 body {
-    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -13,41 +13,32 @@ body {
 body {
     display: flex;
     flex-direction: column;
-
     font-family: 'Space Mono', serif;
     background-color: var(--global-background-color);
 }
 
 header>nav>ul {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 100%);
 }
 
 nav a {
     color: white;
 }
 
+.cocktail-photo img {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+#fuji {
+    margin-top: 0%;
+}
+
 h1,
 h2 {
     font-family: 'Tenor Sans', serif;
     color: white;
-}
-
-.hero-image {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-    background-size: cover;
-    background-position: right 20%;
-    background-repeat: no-repeat;
-}
-
-#fuji {
-    background-image: linear-gradient(transparent 0%, transparent 20%, var(--global-background-color) 100%), url("../images/cocktails/mt_fuji_wide.jpg");
 }
 
 .hero-text {
@@ -74,4 +65,55 @@ div.hero-text>p {
     font-size: 2em;
     margin-top: 0.5em;
     text-decoration: none;
+}
+
+.spec {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(transparent 0%, rgba(34,34,34,0.5) 20%);
+    color: white;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.prep {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(34,34,34,0.5) 80%, transparent 100%);
+    color: white;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.prep-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.prep-item {
+    width: 50%;
+    padding: 2em;
+}
+
+.prep-name {
+    font-weight: 900;
+}
+
+.prep-ingredients {
+    text-align: left;
+}
+
+.prep-instructions {
+    text-align: left;
+    text-wrap: wrap;
 }
