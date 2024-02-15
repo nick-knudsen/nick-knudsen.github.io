@@ -35,6 +35,10 @@ body {
     margin-top: -5%;
 }
 
+#pear {
+    margin-top: -15%;
+}
+
 h1,
 h2 {
     font-family: 'Tenor Sans', serif;
@@ -101,6 +105,7 @@ h2 {
 .prep-list {
     display: flex;
     justify-content: space-around;
+    /* flex-wrap: wrap; */
 }
 
 .prep-item {
