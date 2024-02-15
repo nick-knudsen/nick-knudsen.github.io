@@ -69,27 +69,30 @@ div.hero-text>p {
 
 .spec {
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(transparent 0%, rgba(34,34,34,0.5) 20%);
+    background: linear-gradient(transparent 0%, rgba(34,34,34,0.5) 30%);
     color: white;
     text-align: center;
     font-size: 1.25em;
 }
 
+.spacer {
+    height: 15vh;
+}
+
 h2 {
-    text-transform: uppercase;
     font-size: 2em;
+    padding: 2em 0em 0em 0em;
 }
 
 .prep {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(rgba(34,34,34,0.5) 80%, transparent 100%);
+    background-color: rgba(34,34,34,0.5);
     color: white;
     text-align: center;
     font-size: 1.25em;
@@ -102,7 +105,7 @@ h2 {
 
 .prep-item {
     width: 50%;
-    padding: 2em;
+    padding: 0em 2em;
 }
 
 .prep-name {
@@ -116,4 +119,20 @@ h2 {
 .prep-instructions {
     text-align: left;
     text-wrap: wrap;
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(34,34,34,0.5) 80%, transparent 100%);
+    align-items: center;
+    color: white;
+    text-align: justify;
+    font-size: 1.25em;
+    text-wrap: wrap;
+}
+
+.about p {
+    padding: 0em 5em;
 }
