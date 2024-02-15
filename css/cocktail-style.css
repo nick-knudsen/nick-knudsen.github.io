@@ -17,14 +17,6 @@ body {
     background-color: var(--global-background-color);
 }
 
-header>nav>ul {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 100%);
-}
-
-nav a {
-    color: white;
-}
-
 .cocktail-photo img {
     width: 100%;
     position: fixed;
@@ -37,6 +29,10 @@ nav a {
 
 #fjords {
     margin-top: -7.5%;
+}
+
+#mustard {
+    margin-top: -5%;
 }
 
 h1,
@@ -61,7 +57,7 @@ div.hero-text>h1 {
 }
 
 div.hero-text>p {
-    font-size: 100%;
+    font-size: 1.2em;
 }
 
 .fa-arrow-circle-down {

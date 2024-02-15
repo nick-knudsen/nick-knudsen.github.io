@@ -21,6 +21,22 @@ header >nav>ul {
     border: inherit;
 }
 
+header>nav.dark>ul {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 100%);
+}
+
+header>nav.light>ul {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), transparent 100%);
+}
+
+nav.dark a {
+    color: white;
+}
+
+nav.light a {
+    color: black;
+}
+
 header >nav li {
     padding: 1em;
     text-align: center;
