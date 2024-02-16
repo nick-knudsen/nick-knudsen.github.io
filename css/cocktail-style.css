@@ -105,11 +105,11 @@ h2 {
 .prep-list {
     display: flex;
     justify-content: space-around;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 
 .prep-item {
-    width: 50%;
+    width: 40%;
     padding: 0em 2em;
 }
 
