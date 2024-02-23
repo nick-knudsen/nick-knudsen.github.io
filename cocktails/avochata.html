@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cocktail-style.css">
+    <link rel="stylesheet" href="../css/nav-style.css">
+    <script src="https://kit.fontawesome.com/81346e6ad4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tenor+Sans">
+    <title>Nick Knudsen</title>
+</head>
+
+<body>
+    <header>
+        <nav class="dark">
+            <ul>
+                <li id="home"><a href="/index.html">Home</a></li>
+                <li><a href="/cocktails.html">Cocktails</a></li>
+                <li><a href="/code.html">Code</a></li>
+                <li><a href="/photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cocktail-photo">
+        <div class="overlay" id="avochata_overlay"></div>
+        <img src="../images/cocktails/avochata_tall_2.jpg" id="avochata">
+    </div>
+
+    <div class="hero-text">
+        <h1 class="name">AVOCHATA</h1>
+        <p>A stirred drink where agave meets avocado meets horchata</p>
+        <a href="#spec" class="scroll-down-button">
+            <i class='fas fa-arrow-circle-down'></i>
+        </a>
+    </div>
+
+    <div class="spec" id="spec">
+        <div class="spacer"></div>
+        <h2>THE SPEC</h2>
+        <p>1.5 oz. avocado-infused Pueblo Viejo blanco tequila<br>
+        1 oz. Centenario Añejo<br>
+        0.5 oz. horchata syrup<br>
+        3 dashes Angostura bitters<br>
+        3 dashes Tamarind agave Fiesta bitters<br>
+        4 drops 20% saline solution</p>
+        <p>Combine ingredients in a mixing glass, add ice and stir.<br>
+        Strain into a coupe glass.<br>
+        Using an atomizer, spray twice with del Maguey Vida Mezcal</p>
+    </div>
+    <div class="prep">
+        <h2>THE PREP</h2>
+        <div class="prep-list">
+            <div class="prep-item">
+                <p class="prep-name">Avocado-infused tequila</p>
+                <p class="prep-ingredients">1400g Pueblo Viejo blanco tequila<br>
+                600g avocado<br>
+                4g Pectinex Ultra SP-L<br>
+                667mL room temperature water<br>
+                5.33g agar agar
+            </p>
+                <p class="prep-instructions">In a vitamix or similar blender, combine tequila, avocado, and Pectinex.
+                Blend until homogeneous. In a saucepan, combine water and agar and whisk until dissolved. Heat on induction
+                burner until boiling, turn down to 212F and cover. After two minutes, remove from burner, and slowly add avocado tequila puree
+                while whisking. Once fully incorporated, pour into small hotel pan and refrigerate for at least four hours.
+                To strain, spoon gel into two nut milk bags, and whisk to break up. Tie strings to close, place in large perforated
+                hotel pan nested inside large hotel pan. Place a third large hotel pan on top of the nut milk bags and weigh down 
+                with about forty pounds. Let strain for four hours. Pour into container to sit overnight. The next day,
+                strain through Chemex filter. The resulting liquid should be perfectly clear.
+
+                </p>
+            </div>
+            <div class="prep-item">
+                <p class="prep-name">Horchata syrup</p>
+                <p class="prep-ingredients">450g arborio rice<br>
+                3g cinnamon stick<br>
+                2 vanilla beans<br>
+                1000mL hot water<br>
+                ~1500g agave nectar</p>
+                <p class="prep-instructions">Toast rice and cinnamon on a sheet pan at 400F for fifteen minutes. Toast vanilla beans
+                on a gas flame using tongs until puffy, about 30 seconds. Combine toasted rice, cinnamon, and vanilla beans with water and 
+                blend in vitamix or similar blender for two minutes. Strain through fine mesh chinois, pressing with spatula. Strain through a Chemex filter.
+                Combine the resulting liquid with twice its weight in agave nectar.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>THE STORY</h2>
+        <p>
+        </p>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>&copy; 2024 Nick Knudsen</li>
+            <li><a href="https://www.instagram.com/cocktail.chem/" target="_blank" class="fa fa-instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/nick-h-knudsen" target="_blank" class="fa fa-linkedin"></a></li>
+            <li><a href="https://www.flickr.com/photos/nickknudsen/" target="_blank" class="fa fa-flickr"></a></li>
+            <li><a href="https://github.com/nick-knudsen/" target="_blank" class="fa fa-github"></a></li>
+            <li><a href="mailto:nick.knudsen14@gmail.com" class="fa fa-envelope-o"></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function scrollToElement(elementId, duration) {
+            const targetElement = document.getElementById(elementId);
+            const targetPosition = targetElement.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const startTime = performance.now();
+
+            function animate(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+                window.scrollTo(0, startPosition + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t ** 3 : 1 - ((-2 * t + 2) ** 3) / 2;
+        }
+
+        // Add smooth scrolling to all links with class "smooth-scroll"
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToElement(targetId, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>

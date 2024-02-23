@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cocktail-style.css">
+    <link rel="stylesheet" href="../css/nav-style.css">
+    <script src="https://kit.fontawesome.com/81346e6ad4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tenor+Sans">
+    <title>Nick Knudsen</title>
+</head>
+
+<body>
+    <header>
+        <nav class="dark">
+            <ul>
+                <li id="home"><a href="/index.html">Home</a></li>
+                <li><a href="/cocktails.html">Cocktails</a></li>
+                <li><a href="/code.html">Code</a></li>
+                <li><a href="/photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cocktail-photo">
+        <img src="../images/cocktails/mt_fuji_wide.jpg" id="fuji">
+    </div>
+
+    <div class="hero-text">
+        <h1 class="name">IT'S SNOWING</h1>
+        <h1 class="name">ON MT. FUJI</h1>
+        <p>A savory martini riff highlighting Japanese botanicals</p>
+        <a href="#spec" class="scroll-down-button">
+            <i class='fas fa-arrow-circle-down'></i>
+        </a>
+    </div>
+
+    <div class="spec" id="spec">
+        <div class="spacer"></div>
+        <h2>THE SPEC</h2>
+        <p>1.5 oz. Hojicha-infused Roku gin <br>
+            1 oz. Amabuke Ginno Kurenai Junmai sake <br>
+            0.5 oz. red beet and purple carrot shrub </p>
+        <p>Combine ingredients in a mixing glass, add ice, and stir. <br>
+            Strain into a coupe glass, garnish with a dehydrated Chioggia beet</p>
+    </div>
+    <div class="prep">
+        <h2>THE PREP</h2>
+        <div class="prep-list">
+            <div class="prep-item">
+                <p class="prep-name">Infused gin</p>
+                <p class="prep-ingredients">750mL Roku gin<br>
+                7.5g Hojicha tea</p>
+                <p class="prep-instructions">Combine and let sit for four hours.
+                Strain through a fine mesh chinois.</p>
+            </div>
+            <div class="prep-item">
+                <p class="prep-name">Shrub</p>
+                <p class="prep-ingredients">900g red beet<br>
+                900g purple carrot<br>
+                1000g rice wine vinegar<br>
+                920g sugar<br>
+                1.1g salt</p>
+                <p class="prep-instructions">Puree beets and carrots in a food processor.
+                Combine with vinegar, sugar, and salt. Let sit for two days in the fridge. Strain through a fine mesh chinois.</p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>THE STORY</h2>
+        <p>I wanted to create a martini using sake in place of vermouth. 
+            Roku gin is an obvious thematic pairing, bringing six Japanese botanicals into play. 
+            The Amabuki sake is quite unusual, as it is made from unpolished red rice, which
+            gives it a beautiful rose color. I selected this sake for a few reasons: 
+            it is light, semi-dry, with a lot of citrus on the finish, and it is best served cold.
+            These characteristics make it fundamentally similar to a blanc vermouth.
+            The beet and carrot shrub gives the drink a nice earthy undertone, and puts it in the 
+            realm of dirty martinis. Plus it doesn't hurt that it's a deep purple in color, which
+            perfectly complements the sake. Hojicha, a roasted Japanese green tea, adds a nutty
+            top note to balance out the earthiness. As a finishing touch, the dehydrated chioggia
+            beet is both visually and olfactorily stimulating, providing a hint as to what awaits
+            you in the glass.
+        </p>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>&copy; 2024 Nick Knudsen</li>
+            <li><a href="https://www.instagram.com/cocktail.chem/" target="_blank" class="fa fa-instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/nick-h-knudsen" target="_blank" class="fa fa-linkedin"></a></li>
+            <li><a href="https://www.flickr.com/photos/nickknudsen/" target="_blank" class="fa fa-flickr"></a></li>
+            <li><a href="https://github.com/nick-knudsen/" target="_blank" class="fa fa-github"></a></li>
+            <li><a href="mailto:nick.knudsen14@gmail.com" class="fa fa-envelope-o"></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function scrollToElement(elementId, duration) {
+            const targetElement = document.getElementById(elementId);
+            const targetPosition = targetElement.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const startTime = performance.now();
+
+            function animate(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+                window.scrollTo(0, startPosition + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t ** 3 : 1 - ((-2 * t + 2) ** 3) / 2;
+        }
+
+        // Add smooth scrolling to all links with class "smooth-scroll"
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToElement(targetId, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>

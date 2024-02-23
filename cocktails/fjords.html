@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cocktail-style.css">
+    <link rel="stylesheet" href="../css/nav-style.css">
+    <script src="https://kit.fontawesome.com/81346e6ad4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tenor+Sans">
+    <title>Nick Knudsen</title>
+</head>
+
+<body>
+    <header>
+        <nav class="dark">
+            <ul>
+                <li id="home"><a href="/index.html">Home</a></li>
+                <li><a href="/cocktails.html">Cocktails</a></li>
+                <li><a href="/code.html">Code</a></li>
+                <li><a href="/photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cocktail-photo">
+        <img src="../images/cocktails/fjords_wide.jpg" id="fjords">
+    </div>
+
+    <div class="hero-text">
+        <h1 class="name">PINING FOR</h1>
+        <h1 class="name">THE FJORDS</h1>
+        <p>A silky smooth winter gin sour with notes of pine, orange, and spice</p>
+        <a href="#spec" class="scroll-down-button">
+            <i class='fas fa-arrow-circle-down'></i>
+        </a>
+    </div>
+
+    <div class="spec" id="spec">
+        <div class="spacer"></div>
+        <h2>THE SPEC</h2>
+        <p>1.75 oz. St. George Terroir gin <br>
+        0.5 oz. acid-adjusted orange juice <br>
+        0.5 oz. 5% lactic acid solution <br>
+        0.75 oz. pinecone syrup <br>
+        0.25 oz. Amaro Braulio <br>
+        0.5 oz. aquafaba <br>
+        4 drops 20% saline solution </p>
+        <p>Combine ingredients in a shaker, shake with ice, then strain and dry shake. <br>
+        Fine strain into a large coupe glass rinsed with aquavit.<br>
+        Garnish with Angostura bitter art.</p>
+    </div>
+    <div class="prep">
+        <h2>THE PREP</h2>
+        <div class="prep-list">
+            <div class="prep-item">
+                <p class="prep-name">Pinecone syrup</p>
+                <p class="prep-ingredients">130g dried, destemmed pinecones<br>
+                500g sugar<br>
+                500g water</p>
+                <p class="prep-instructions">To dry the pinecones, place them on a sheet pan
+                lined with parchment paper, and bake for 30 minutes at 225F. At this point it should be easy to remove
+                the scales. If not, continue drying. Combine sugar and water in a vitamix or similar blender, and run
+                for about two minutes. Add pinecone scales and blend for three minutes. Strain through a chinois and
+                then through a nut milk bag.</p>
+            </div>
+            <div class="prep-item">
+                <p class="prep-name">Acid-adjusted orange juice</p>
+                <p class="prep-ingredients">1000mL fresh squeezed orange juice<br>
+                47g citric acid <br>
+                5g malic acid</p>
+                <p class="prep-instructions">Combine all ingredients in a container and shake until acids are dissolved.
+                    Here I have used 1000mL as the base measurement to allow for easy scaling. You probably do not want to
+                    make this much at a time.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>THE STORY</h2>
+        <p>This drink combines one of my favorite amari, Braulio, with one of my favorite gins, St. George Terroir.
+        Amaro Braulio is a complex alpine style amaro with a pine top note. With this gin, in addition to juniper, Douglas Fir is included 
+        as a botanical. To complement these flavors, I created a pinecone syrup using locally foraged pinecones from red and white pine trees.
+        You could use a species local to you, but make sure to first do some reading on the edibility of your local evergreen species.
+        Orange was the clear choice for citrus here, as it pairs so well with pine and spice flavors. The lactic acid helps with balance and 
+        adds a silky texture. For the foam, you could use an egg white at home, but at the bar I like to use aquafaba for a few reasons: 
+        it's vegan, easier to put in a bottle, cheaper, and has a longer shelf life. The aquavit rinse and Angostura garnish both add baking spice
+        notes that are evocative of the wintertime. The name, of course, is a nod to the pine aspects in the drink, the Norwegian aquavit,
+        and references Monty Python's wonderful Dead Parrot sketch.
+
+        </p>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>&copy; 2024 Nick Knudsen</li>
+            <li><a href="https://www.instagram.com/cocktail.chem/" target="_blank" class="fa fa-instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/nick-h-knudsen" target="_blank" class="fa fa-linkedin"></a></li>
+            <li><a href="https://www.flickr.com/photos/nickknudsen/" target="_blank" class="fa fa-flickr"></a></li>
+            <li><a href="https://github.com/nick-knudsen/" target="_blank" class="fa fa-github"></a></li>
+            <li><a href="mailto:nick.knudsen14@gmail.com" class="fa fa-envelope-o"></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function scrollToElement(elementId, duration) {
+            const targetElement = document.getElementById(elementId);
+            const targetPosition = targetElement.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const startTime = performance.now();
+
+            function animate(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+                window.scrollTo(0, startPosition + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t ** 3 : 1 - ((-2 * t + 2) ** 3) / 2;
+        }
+
+        // Add smooth scrolling to all links with class "smooth-scroll"
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToElement(targetId, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>

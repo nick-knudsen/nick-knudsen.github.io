@@ -1,0 +1,224 @@
+:root {
+    --global-background-color: #222;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Mono', serif;
+    background-color: var(--global-background-color);
+}
+
+header > nav > ul {
+    background: linear-gradient(rgba(255, 255, 255, 1), transparent 100%);
+}
+
+nav a {
+    color: black;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    padding-top: 14vw;
+    padding-bottom: 15vw;
+
+    text-align: center;
+    font-size: 1.1em;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: black;
+    font-family: 'Tenor Sans';
+    font-weight: 600;
+}
+
+div.hero-text>h2 {
+    font-size: 3vw;
+    margin-top: 5vw;
+    margin-bottom: -2vw;
+}
+
+div.hero-text>h1 {
+    font-size: 6vw;
+    margin-bottom: 0;
+}
+
+div.hero-text>p {
+    font-size: 1.2em;
+}
+
+.fa-arrow-circle-down {
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.parallax-section {
+    position: relative;
+    height: 300vh;
+    display: flex;
+}
+
+.sticky-half-left, 
+.sticky-half-right {
+    width: 50%;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100vh;
+    color: white;
+
+}
+
+.parallax-section h2 {
+    margin-top: auto;
+    font-size: 4em;
+    color:white;
+    margin-bottom: 0.25em;
+}
+
+.parallax-section button {
+    background-color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 1em;
+    border-radius: 3em;
+    padding-inline: 2em;
+    padding-block: .75em;
+    transition-duration: 0.4s;
+}
+
+.parallax-section button>a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.parallax-section button:hover {
+    transform: scale(1.2);
+}
+
+.parallax-section nav {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.parallax-section nav > ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.parallax-section nav li:not(:last-child)::after {
+    content: "/";
+    margin: 1em;
+}
+
+.parallax-section nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.scrolling-half-left {
+    width: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scrolling-half-right {
+    width: 50%;
+    position: relative;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scrolling-half-left:before {
+    content: '';
+    position: absolute;
+    /* width: 50%; */
+    height: 300%; /* Adjust the value for more or less parallax effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.scrolling-half-right:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 300%; /* Adjust the value for more or less parallax effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parallax-image {
+    width: 100%;
+    height: 33.333%; /* Divide by the number of images to evenly distribute space */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#about > .scrolling-half-right {
+    background-color: #ccc;
+    color: black;
+}
+
+#cocktails {
+    background-color: #3498db; /* Blue background for Section 1 */
+}
+
+#cocktails .parallax-image:nth-child(1) {
+    background-image: url('../images/cocktail_icon.jpg');
+}
+
+#cocktails .parallax-image:nth-child(2) {
+    background-image: url('../images/cocktail_icon.jpg');
+}
+
+#cocktails .parallax-image:nth-child(3) {
+    background-image: url('../images/cocktail_icon.jpg');
+}
+
+
+
+#code {
+    background-color: #e74c3c; /* Red background for Section 2 */
+}
+
+#photography {
+    background-color: yellow;
+}

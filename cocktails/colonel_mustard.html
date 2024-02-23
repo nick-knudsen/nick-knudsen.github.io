@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cocktail-style.css">
+    <link rel="stylesheet" href="../css/nav-style.css">
+    <script src="https://kit.fontawesome.com/81346e6ad4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tenor+Sans">
+    <title>Nick Knudsen</title>
+</head>
+
+<body>
+    <header>
+        <nav class="dark">
+            <ul>
+                <li id="home"><a href="/index.html">Home</a></li>
+                <li><a href="/cocktails.html">Cocktails</a></li>
+                <li><a href="/code.html">Code</a></li>
+                <li><a href="/photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cocktail-photo">
+        <img src="../images/cocktails/mustard_wide_2.jpg" id="mustard">
+    </div>
+
+    <div class="hero-text" id="mustard">
+        <h1 class="name" >COLONEL MUSTARD</h1>
+        <h1 class="name">IN THE CONSERVATORY</h1>
+        <h1 class="name">WITH THE CANDLESTICK</h1>
+        <p>An umami rum sour with ginger, maple, and mustard</p>
+        <a href="#spec" class="scroll-down-button">
+            <i class='fas fa-arrow-circle-down'></i>
+        </a>
+    </div>
+
+    <div class="spec" id="spec">
+        <div class="spacer"></div>
+        <h2>THE SPEC</h2>
+        <p>2 oz. mustard-infused Plantation 3 Stars rum <br>
+        1 oz. lemon juice<br>
+        0.5 oz. maple syrup<br>
+        0.5 oz. ginger syrup <br>
+        0.25 oz. tamari </p>
+        <p>Combine ingredients in a shaker, add ice, and shake.<br>
+        Double strain over a large ice cube.<br>
+        Garnish with a speared piece of candied ginger.</p>
+    </div>
+    <div class="prep">
+        <h2>THE PREP</h2>
+        <div class="prep-list">
+            <div class="prep-item">
+                <p class="prep-name">Mustard-infused rum</p>
+                <p class="prep-ingredients">750mL Plantation 3 Stars rum<br>
+                26g whole yellow mustard seed</p>
+                <p class="prep-instructions">Combine ingredients in an air-tight container.
+                    Infuse at room temperature for six days. Strain through a chinois.</p>
+            </div>
+            <div class="prep-item">
+                <p class="prep-name">Ginger syrup</p>
+                <p class="prep-ingredients">200g fresh ginger root<br>
+                    500g sugar<br>
+                    500g water</p>
+                <p class="prep-instructions">Combine sugar and water in a vitamix or similar blender 
+                    and blend for about two minutes. Roughly chop the ginger and add it to the blender.
+                    Blend for three minutes, then strain through a fine mesh chinois. Press the ginger pulp with 
+                    a spatula to squeeze all the syrup out.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <h2>THE STORY</h2>
+        <p>When it comes to taste, this is an in-your-face drink with an in-your-face name. Inspired by my favorite 
+            salad dressing recipe, the maple ginger vinaigrette from the Inn at Shelburne Farms cookbook, every aspect 
+            of this cocktail is assertive. For maple syrup, try to find "dark color with robust taste", I find the maple 
+            flavor comes through more clearly using this grade. For tamari, I like to use San-J organic. You could probably 
+            use a different brand of tamari or even soy sauce, but you will probably need to adjust the measurement for balance.
+        </p>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>&copy; 2024 Nick Knudsen</li>
+            <li><a href="https://www.instagram.com/cocktail.chem/" target="_blank" class="fa fa-instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/nick-h-knudsen" target="_blank" class="fa fa-linkedin"></a></li>
+            <li><a href="https://www.flickr.com/photos/nickknudsen/" target="_blank" class="fa fa-flickr"></a></li>
+            <li><a href="https://github.com/nick-knudsen/" target="_blank" class="fa fa-github"></a></li>
+            <li><a href="mailto:nick.knudsen14@gmail.com" class="fa fa-envelope-o"></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function scrollToElement(elementId, duration) {
+            const targetElement = document.getElementById(elementId);
+            const targetPosition = targetElement.offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const startTime = performance.now();
+
+            function animate(currentTime) {
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+                window.scrollTo(0, startPosition + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t ** 3 : 1 - ((-2 * t + 2) ** 3) / 2;
+        }
+
+        // Add smooth scrolling to all links with class "smooth-scroll"
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToElement(targetId, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>
