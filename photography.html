@@ -52,52 +52,25 @@
     <div class="gallery-container">
         <ul class="image-gallery">
             <li>
+                <img src="aurora.png">
+            </li>
+            <li>
+                <img src="eclipse_composite_closeup.jpg">
+            </li>
+            <li>
+                <img src="eclipse_composite_landscape.jpg">
+            </li>
+            <li>
                 <img src="images/notch_road.jpg">
-                <a href="/photography/landscapes.html">
-                    <div class="overlay">
-                        <h3>LANDSCAPES</h3>
-                    </div>
-                </a>
             </li>
             <li>
                 <img src="images/yellowlegs.jpg">
-                <a href="/photography/birds.html">
-                    <div class="overlay">
-                        <h3>Birds</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <img src="images/cocktail_icon.jpg">
-                <a href="/photography/norway.html">
-                    <div class="overlay">
-                        <h3>Norway</h3>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <img src="images/cocktail_icon.jpg">
-                <a href="/photography/italy.html">
-                    <div class="overlay">
-                        <h3>ITALY</h3>
-                    </div>
-                </a>    
             </li>
             <li>
                 <img src="images/raindrops.jpg">
-                <a href="/photography/macro.html">
-                    <div class="overlay">
-                </a>
-                    <h3>MACRO</h3>
-                </div>
             </li>
             <li>
                 <img src="images/kiosk.jpg">
-                <a href="/photography/street.html">
-                    <div class="overlay">
-                </a>
-                    <h3>STREET</h3>
-                </div>
             </li>
         </ul>
     </div>
@@ -158,6 +131,39 @@
             }
 
             autoAdvanceInterval = setInterval(autoAdvance, 10000);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let images = document.querySelectorAll('.image-gallery li img');
+
+            images.forEach(image => {
+                image.addEventListener('click', function () {
+                    // Check if there's already an expanded image and remove it
+                    let existingFullView = document.querySelector('.full-view');
+                    if (existingFullView) {
+                        existingFullView.remove();
+                    }
+
+                    // Create a new image element
+                    let fullViewImage = document.createElement('img');
+                    fullViewImage.src = image.src;
+                    fullViewImage.classList.add('full-view');
+
+                    // Add the new image to the body
+                    document.body.appendChild(fullViewImage);
+
+                    // Disable scrolling on the body
+                    document.body.style.overflow = 'hidden';
+
+                    // Add click event to remove the full view image
+                    fullViewImage.addEventListener('click', function () {
+                        fullViewImage.remove();
+                        document.body.style.overflow = 'auto';  // Re-enable scrolling
+                    });
+                });
+            });
         });
     </script>
 
