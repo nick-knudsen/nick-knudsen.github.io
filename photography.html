@@ -50,28 +50,8 @@
     </div>
 
     <div class="gallery-container">
-        <ul class="image-gallery">
-            <li>
-                <img src="aurora.png">
-            </li>
-            <li>
-                <img src="eclipse_composite_closeup.jpg">
-            </li>
-            <li>
-                <img src="eclipse_composite_landscape.jpg">
-            </li>
-            <li>
-                <img src="images/notch_road.jpg">
-            </li>
-            <li>
-                <img src="images/yellowlegs.jpg">
-            </li>
-            <li>
-                <img src="images/raindrops.jpg">
-            </li>
-            <li>
-                <img src="images/kiosk.jpg">
-            </li>
+        <ul class="image-gallery" id="imageGallery">
+            <!-- Dynamically load gallery images -->
         </ul>
     </div>
 
@@ -86,86 +66,7 @@
         </ul>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-            let carousel = document.querySelector('.carousel');
-            let left = document.querySelector('.left');
-            let right = document.querySelector('.right');
-            let item = document.querySelector('.slide');
-            let slideIndex = 0;
-
-            right.addEventListener('click', function (e) {
-                slideIndex++
-                if (slideIndex >= carousel.children.length) {
-                    slideIndex = 0;
-                }
-                updateCarousel();
-                resetAutoAdvanceTimer();
-            });
-
-            left.addEventListener('click', function () {
-                slideIndex--;
-                if (slideIndex < 0) {
-                    slideIndex = carousel.children.length - 1;
-                }
-                updateCarousel();
-                resetAutoAdvanceTimer();
-            });
-
-            function updateCarousel() {
-                carousel.scrollLeft = slideIndex * item.clientWidth;
-            }
-
-            function resetAutoAdvanceTimer() {
-                clearInterval(autoAdvanceInterval)
-                autoAdvanceInterval = setInterval(autoAdvance, 10000)
-            }
-
-            function autoAdvance() {
-                slideIndex++;
-                if (slideIndex >= carousel.children.length) {
-                    slideIndex = 0;
-                }
-                updateCarousel();
-            }
-
-            autoAdvanceInterval = setInterval(autoAdvance, 10000);
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let images = document.querySelectorAll('.image-gallery li img');
-
-            images.forEach(image => {
-                image.addEventListener('click', function () {
-                    // Check if there's already an expanded image and remove it
-                    let existingFullView = document.querySelector('.full-view');
-                    if (existingFullView) {
-                        existingFullView.remove();
-                    }
-
-                    // Create a new image element
-                    let fullViewImage = document.createElement('img');
-                    fullViewImage.src = image.src;
-                    fullViewImage.classList.add('full-view');
-
-                    // Add the new image to the body
-                    document.body.appendChild(fullViewImage);
-
-                    // Disable scrolling on the body
-                    document.body.style.overflow = 'hidden';
-
-                    // Add click event to remove the full view image
-                    fullViewImage.addEventListener('click', function () {
-                        fullViewImage.remove();
-                        document.body.style.overflow = 'auto';  // Re-enable scrolling
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="js/photography.js"></script>
 
 </body>
 
