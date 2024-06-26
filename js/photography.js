@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     fetch('/images')
         .then(response => {
+            console.log('Fetch response:', response);  // Log the raw response
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
             return response.json();
         })
+
         .then(images => {
+            console.log('Fetched images:', images);  // Log the parsed JSON response
             const gallery = document.getElementById('imageGallery');
             const carousel = document.querySelector('.carousel');
 
