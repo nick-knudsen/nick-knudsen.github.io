@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('/images')
+    console.log('document loaded')
+    fetch('/api/images')
         .then(response => {
             console.log('Fetch response:', response);  // Log the raw response
             if (!response.ok) {

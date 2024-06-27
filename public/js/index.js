@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Document loaded');
-});
-
 function scrollToElement(elementId, duration) {
     const targetElement = document.getElementById(elementId);
     const targetPosition = targetElement.offsetTop;
