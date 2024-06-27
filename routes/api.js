@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Endpoint to fetch image filenames
 router.get('/images', (req, res) => {
-    const imagesDir = path.join(__dirname, '..', 'public', 'photography');
+    const imagesDir = path.join(__dirname, '..', 'public', 'images', 'photography');
     fs.readdir(imagesDir, (err, files) => {
         if (err) {
             console.error('Error reading image directory:', err);
