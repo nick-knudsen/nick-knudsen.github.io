@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 
 // Endpoint to fetch image filenames
 app.get('/images', (req, res) => {
@@ -22,8 +22,12 @@ app.get('/images', (req, res) => {
             return ['.jpg', '.jpeg', '.png', '.gif'].includes(path.extname(file).toLowerCase());
         });
         res.setHeader('Content-Type', 'application/json');
+        console.log(imageFiles);
         res.json(imageFiles);
     });
+
+    res.setHeader('Content-Type', 'application/json');
+    res.json(imageFiles);
 });
 
 // Serve the index.html file
