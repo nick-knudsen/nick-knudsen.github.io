@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index-style.css">
-    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="../public/css/index-style.css">
+    <link rel="stylesheet" href="../public/css/nav-style.css">
     <script src="https://kit.fontawesome.com/81346e6ad4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tenor+Sans">
@@ -17,10 +17,10 @@
     <header>
         <nav class="light">
             <ul>
-                <li id="home"><a href="/index.html">Home</a></li>
-                <li><a href="/cocktails.html">Cocktails</a></li>
-                <li><a href="/code.html">Code</a></li>
-                <li><a href="/photography.html">Photography</a></li>
+                <li id="home"><a href="index.html">Home</a></li>
+                <li><a href="cocktails.html">Cocktails</a></li>
+                <li><a href="code.html">Code</a></li>
+                <li><a href="photography.html">Photography</a></li>
             </ul>
         </nav>
     </header>
@@ -150,43 +150,7 @@
         </ul>
     </footer>
 
-    <script>
-        function scrollToElement(elementId, duration) {
-            const targetElement = document.getElementById(elementId);
-            const targetPosition = targetElement.offsetTop;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            const startTime = performance.now();
-
-            function animate(currentTime) {
-                const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1);
-                const ease = easeInOutCubic(progress);
-                window.scrollTo(0, startPosition + distance * ease);
-
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animate);
-                }
-            }
-
-            requestAnimationFrame(animate);
-        }
-
-        function easeInOutCubic(t) {
-            return t < 0.5 ? 4 * t ** 3 : 1 - ((-2 * t + 2) ** 3) / 2;
-        }
-
-        // Add smooth scrolling to all links with class "smooth-scroll"
-        const links = document.querySelectorAll('a[href^="#"]');
-
-        links.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                scrollToElement(targetId, 1500);
-            });
-        });
-    </script>
+    <script src="../public/js/index.js"></script>
 </body>
 
 </html>

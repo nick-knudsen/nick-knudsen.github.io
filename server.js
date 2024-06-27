@@ -1,38 +1,19 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
+const apiRoutes = require('./routes/api');
 
 const app = express();
 const port = 3000;
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Endpoint to fetch image filenames
-app.get('/images', (req, res) => {
-    const imagesDir = path.join(__dirname, 'images', 'photography');
-    fs.readdir(imagesDir, (err, files) => {
-        if (err) {
-            console.error('Error reading image directory:', err);
-            res.status(500).json({error: 'Internal server error'});
-            return;
-        }
-        // Filter out only image files (optional)
-        const imageFiles = files.filter(file => {
-            return ['.jpg', '.jpeg', '.png', '.gif'].includes(path.extname(file).toLowerCase());
-        });
-        res.setHeader('Content-Type', 'application/json');
-        console.log(imageFiles);
-        res.json(imageFiles);
-    });
-
-    res.setHeader('Content-Type', 'application/json');
-    res.json(imageFiles);
-});
+// Use API routes
+app.use('/api', apiRoutes);
 
 // Serve the index.html file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 app.listen(port, () => {
