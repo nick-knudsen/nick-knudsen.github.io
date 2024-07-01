@@ -17,7 +17,6 @@ router.get('/images', (req, res) => {
             return ['.jpg', '.jpeg', '.png', '.gif'].includes(path.extname(file).toLowerCase());
         });
         res.setHeader('Content-Type', 'application/json');
-        console.log(imageFiles);
         res.json(imageFiles);
     });
 });

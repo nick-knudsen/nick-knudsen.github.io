@@ -16,8 +16,8 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/api', apiRouter);
 // use sub-main page routes
 app.use('/photography', photographyRouter);
-app.use('cocktails', cocktailRouter);
-app.use('code', codeRouter);
+app.use('/cocktails', cocktailRouter);
+app.use('/code', codeRouter);
 // Use index routes
 app.use('/', indexRouter);
 
