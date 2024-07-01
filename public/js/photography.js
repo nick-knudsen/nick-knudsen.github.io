@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('document loaded');
     fetch('/api/images')
         .then(response => {
-            console.log('Fetch response:', response);  // Log the raw response
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
@@ -18,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Add to gallery
                 const listItem = document.createElement('li');
                 const img = document.createElement('img');
-                img.src = `images/photography/${src}`;
+                img.src = `public/images/photography/${src}`;
                 listItem.appendChild(img);
                 gallery.appendChild(listItem);
 
