@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
         .then(images => {
-            console.log('Fetched images:', images);  // Log the parsed JSON response
             const gallery = document.getElementById('imageGallery');
-            const carousel = document.querySelector('.carousel');
 
             images.forEach(src => {
                 // Add to gallery
@@ -19,14 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 img.src = `public/images/photography/${src}`;
                 listItem.appendChild(img);
                 gallery.appendChild(listItem);
-
-                // // Add to carousel
-                // const slide = document.createElement('div');
-                // slide.classList.add('slide');
-                // const carouselImg = document.createElement('img');
-                // carouselImg.src = `images/${src}`;
-                // slide.appendChild(carouselImg);
-                // carousel.appendChild(slide);
             });
 
             initializeCarousel();
