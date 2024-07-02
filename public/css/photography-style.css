@@ -46,7 +46,7 @@ nav a {
 
     text-align: center;
     font-size: 1.1em;
-    color: black;
+    color: white;
 }
 
 h1,
@@ -55,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: black;
+    color: white;
     font-family: 'Tenor Sans';
     font-weight: 600;
 }
