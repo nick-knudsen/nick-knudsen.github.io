@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const listItem = document.createElement('li');
                 const img = document.createElement('img');
                 img.src = `public/images/photography/${src}`;
+                img.loading= 'lazy';
                 listItem.appendChild(img);
                 gallery.appendChild(listItem);
             });
