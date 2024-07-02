@@ -35,19 +35,19 @@ nav a {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_home.jpg");
+    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_cocktails.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .hero-text {
-    padding-top: 10vw;
-    padding-bottom: 15vw;
+    padding-top: 14vw;
+    padding-bottom: 25vw;
 
     text-align: center;
     font-size: 1.1em;
-    color: black;
+    color: white;
 }
 
 .hero-text h1 {
@@ -65,7 +65,7 @@ div.hero-text>p {
 }
 
 .fa-arrow-circle-down {
-    color: black;
+    color: white;
     font-size: 2em;
     text-decoration: none;
 }

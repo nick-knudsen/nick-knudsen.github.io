@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
   res.sendFile(path.join(__dirname, '..', 'views', 'cocktails.html'));
 });
 
+router.get('/:cocktailId', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '..', 'views', 'cocktails', req.params.cocktailId) + '.html')
+})
+
 module.exports = router;

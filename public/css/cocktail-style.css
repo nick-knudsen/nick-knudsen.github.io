@@ -25,8 +25,17 @@ body {
     z-index: -1;
 }
 
-#avochata_overlay {
+#overlay_black {
     background: linear-gradient(to right, black 30%, transparent 35%, transparent 65%, black 70%);
+}
+
+#overlay_white {
+    background: linear-gradient(to right, white 30%, transparent 35%, transparent 65%, white 70%);
+}
+
+#overlay_brown {
+    background: linear-gradient(to right, rgb(59, 40, 10) 30%, transparent 35%, transparent 65%, rgb(59, 40, 10) 70%);
+
 }
 
 .cocktail-photo img {
@@ -65,8 +74,22 @@ body {
     margin-top: -13.5%;
 }
 
-#bumpkin-spec {
-    padding: 2em;
+#high_sobriety {
+    width:50%;
+    margin-left: 25%;
+    margin-top: -15%;
+}
+
+#tennessillin {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -15%;
+}
+
+#honey_shrub {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: -15%;
 }
 
 h1,
@@ -111,6 +134,10 @@ div.hero-text>p {
     color: white;
     text-align: center;
     font-size: 1.25em;
+}
+
+#bumpkin-spec {
+    padding: 2em;
 }
 
 .spacer {
