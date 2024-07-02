@@ -42,7 +42,7 @@ nav a {
 
 .hero-text {
     padding-top: 14vw;
-    padding-bottom: 15vw;
+    padding-bottom: 20vw;
 
     text-align: center;
     font-size: 1.1em;
@@ -76,7 +76,7 @@ div.hero-text>p {
 }
 
 .fa-arrow-circle-down {
-    color: black;
+    color: white;
     font-size: 2em;
     text-decoration: none;
 }
