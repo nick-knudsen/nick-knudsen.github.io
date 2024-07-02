@@ -41,14 +41,42 @@ function initializeFullView() {
             const fullViewImage = document.createElement('img');
             fullViewImage.src = image.src;
             fullViewImage.classList.add('full-view');
-
             document.body.appendChild(fullViewImage);
+
+            // Save the current scroll position
+            const scrollY = window.scrollY;
+            // Maintain the scrollbar while preventing scrolling
             document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.paddingRight = `${getScrollbarWidth()}px`;
 
             fullViewImage.addEventListener('click', function () {
                 fullViewImage.remove();
-                document.body.style.overflow = 'auto';
+
+                // re-enable scrolling
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+                document.body.style.position = '';
+                document.body.style.top = '';
+                // Restore the scroll position
+                window.scrollTo(0, scrollY);
             });
         });
     });
+}
+
+function getScrollbarWidth() {
+    // Create a temporary div to measure the scrollbar width
+    const div = document.createElement('div');
+    div.style.overflowY = 'scroll';
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+
+    const scrollbarWidth = div.offsetWidth - div.clientWidth;
+    document.body.removeChild(div);
+
+    return scrollbarWidth;
 }
