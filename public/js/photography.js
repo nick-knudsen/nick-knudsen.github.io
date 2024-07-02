@@ -19,58 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 gallery.appendChild(listItem);
             });
 
-            initializeCarousel();
             initializeFullView();
 
         })
         .catch(error => console.error('Error fetching images:', error));
 });
-
-function initializeCarousel() {
-    // Carousel functionality
-    let slideIndex = 0;
-    const carousel = document.querySelector('.carousel');
-    const item = document.querySelector('.slide');
-    const left = document.querySelector('.left');
-    const right = document.querySelector('.right');
-
-    function updateCarousel() {
-        carousel.scrollLeft = slideIndex * item.clientWidth;
-    }
-
-    function resetAutoAdvanceTimer() {
-        clearInterval(autoAdvanceInterval);
-        autoAdvanceInterval = setInterval(autoAdvance, 10000);
-    }
-
-    function autoAdvance() {
-        slideIndex++;
-        if (slideIndex >= carousel.children.length) {
-            slideIndex = 0;
-        }
-        updateCarousel();
-    }
-
-    right.addEventListener('click', function () {
-        slideIndex++;
-        if (slideIndex >= carousel.children.length) {
-            slideIndex = 0;
-        }
-        updateCarousel();
-        resetAutoAdvanceTimer();
-    });
-
-    left.addEventListener('click', function () {
-        slideIndex--;
-        if (slideIndex < 0) {
-            slideIndex = carousel.children.length - 1;
-        }
-        updateCarousel();
-        resetAutoAdvanceTimer();
-    });
-
-    let autoAdvanceInterval = setInterval(autoAdvance, 10000);
-}
 
 function initializeFullView() {
 
