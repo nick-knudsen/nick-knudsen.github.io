@@ -98,7 +98,7 @@ div.hero-text>p {
 
 .parallax-section h2 {
     margin-top: auto;
-    font-size: 4em;
+    font-size: 8em;
     color:white;
     margin-bottom: 0.25em;
 }
@@ -156,6 +156,8 @@ div.hero-text>p {
 }
 
 .scrolling-half-right {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     position: relative;
     top: 0;
@@ -193,8 +195,53 @@ div.hero-text>p {
 }
 
 #about > .scrolling-half-right {
-    background-color: #ccc;
+    background-color: white;
     color: black;
+}
+
+#portrait {
+    width: 50%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    align-self: center;
+    margin-top: 15%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-position: center top;
+    z-index: 9998;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#about-text {
+    padding: 10em;
+    z-index: 9999;
+}
+
+#about p {
+    padding: 1em;
+    text-align: justify;
+    font-size: 1.5em;
 }
 
 #cocktails {
@@ -212,8 +259,6 @@ div.hero-text>p {
 #cocktails .parallax-image:nth-child(3) {
     background-image: url('../images/cocktail_icon.jpg');
 }
-
-
 
 #code {
     background-color: #e74c3c; /* Red background for Section 2 */
