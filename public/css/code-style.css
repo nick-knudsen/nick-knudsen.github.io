@@ -72,3 +72,75 @@ div.hero-text>p {
     font-size: 2em;
     text-decoration: none;
 }
+
+.projects-gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    margin: 2em;
+}
+
+.project-title h2 {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.project-image {
+    position: relative;
+    width: 25%;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.project-overview {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    max-width: 75%;
+    margin: 2em;
+}
+
+.project-text {
+    margin: 1em;
+    text-align: justify;
+}
+
+.project-text p {
+    margin: 2em;
+}
+
+.project-overview button {
+    background-color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 1em;
+    border-radius: 3em;
+    padding-inline: 2em;
+    padding-block: .75em;
+    transition-duration: 0.4s;
+    align-self: center;
+}
+
+.project-overview button>a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.project-overview button:hover {
+    transform: scale(1.2);
+}

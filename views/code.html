@@ -35,8 +35,43 @@
         </div>
     </div>
 
-    <div class="projects">
-
+    <div class="projects-gallery">
+        <div class="project">
+            <div class="project-title">
+                <h2>Evolutionary Crossword Grid Shape Generation</h2>
+            </div>
+            <div class="project-content" id="crossword">  
+                <div class="project-image">
+                    <img src="../public/images/empty_crossword.JPG">
+                </div>
+                <div class="project-overview">
+                    <div class="project-text">
+                        <p>This is a tool created to aid crossword constructors 
+                        in selecting a grid shape for their puzzle, that is, which cells in the crossword 
+                        will be black and which will be white. Currently, this is a part of the process that involves 
+                        a lot of guesswork, and serves as a barrier to entry for new constructors. There exist many tools to aid 
+                        in other stages of crossword construction, which have been a great boon to the hobby. These include massive word lists 
+                        with ranked word scores, autofill algorithms, and grid libraries. The goal of this tool is not to generate a whole puzzle from nothing, 
+                        as I believe human guided construction and fill is essential to an interesting and entertaining puzzle.</p>
+                        <p>Most crosswords include what are termed "spanners", long answers that cross the grid either horizontally or vertically. 
+                        In a themed puzzle, these share a common theme, while in an unthemed puzzle they are usually unrelated. Either way, it is easy to see 
+                        that these answers restrict the rest of the words in the grid, or "fill", more than any other aspect of the puzzle. Likewise, these are 
+                        generally the first answers placed in the grid, which is then designed around them. A constructor may test out dozens of grid shapes before settling 
+                        on one which works well for their spanners. This is the part of the process which I believe can be improved upon.</p>
+                        <p>To use this tool, a constructor simply inputs their spanners, which serve as seeds for the algorithm, and will be returned a ranked list of
+                            "least constrained grid shapes." These are the grid shapes which provide the most different options in filling the puzzle, providing the constructor 
+                            with more choices in doing so. This should result in puzzles with less "crosswordese" (words or abbreviations found almost exclusively in or vastly overrepresented in crosswords) 
+                            and a greater variety of fill, meaning more fun for solvers!</p>
+                        <p>The algorithm works by first stochastically generating grid shapes that will accept spanners of the given lengths. While it would be easier to simply choose
+                            these from a library, I believe stochastic generation of grid shapes should result in a wider variety of such, as a very small fraction of all possible legal grid shapes have been published.
+                            This group serves as the initial generation in an evolutionary algorithm. Fitness is measured by brute force filling grids at random, timing the length and counting number of attempts to successful fill,
+                            and then averaging this metric over multiple trials. This should serve as a proxy for the magnitude of the number of different ways to fill the given grid shape, as actually enumerating all possible fills would 
+                            be extremely computationally intensive. The best performing grid shapes are then selected to give rise to subsequent generations.</p>
+                    </div>
+                    <button type="button" class="github-repo"><a href="https://github.com/nick-knudsen/gridfinder">Github Repo</a></button>
+                </div>
+            </div>
+        </div>
     </div>
     
     <footer>
