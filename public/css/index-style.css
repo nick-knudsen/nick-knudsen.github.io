@@ -211,6 +211,10 @@ div.hero-text>p {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+#about {
+    height: 225vh;
+}
+
 #about > .scrolling-half-right {
     background-image: linear-gradient(var(--global-background-color) 0%, white 25%, white 75%, var(--global-background-color) 100%);
     color: black;
@@ -277,4 +281,25 @@ div.hero-text>p {
 
 #code .parallax-image:nth-child(1) {
     background-image: url('../images/empty_crossword.JPG');
+}
+
+#code .parallax-image:nth-child(2) {
+    background-image: url('../images/playlist_generation.jpg');
+}
+
+#code .parallax-image:nth-child(3) {
+    background-image: url('../images/spotify.png');
+}
+
+#photography .parallax-image:nth-child(1) {
+    background-image: url('../images/photography/eclipse_composite_landscape.jpg');
+}
+
+#photography .parallax-image:nth-child(2) {
+    background-image: url('../images/photography/DSC_4910.jpg');
+    background-position-x: 10%;
+}
+
+#photography .parallax-image:nth-child(3) {
+    background-image: url('../images/photography/DSC_2480.jpg');
 }
