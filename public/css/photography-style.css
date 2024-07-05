@@ -79,6 +79,11 @@ div.hero-text>p {
     color: white;
     font-size: 2em;
     text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.fa-arrow-circle-down:hover {
+    transform: scale(1.2);
 }
 
 .gallery-container {
