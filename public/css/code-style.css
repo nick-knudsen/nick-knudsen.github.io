@@ -91,6 +91,7 @@ div.hero-text>p {
 .project-content {
     display: flex;
     flex-direction: row;
+    align-items: center;
     height: auto;
 }
 
@@ -111,7 +112,7 @@ div.hero-text>p {
     flex-direction: column;
     color: white;
     max-width: 75%;
-    margin: 2em;
+    /* margin: 2em; */
 }
 
 .project-text {

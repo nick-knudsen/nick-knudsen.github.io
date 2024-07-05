@@ -29,22 +29,22 @@
         <div class="hero-text">
             <h1 id="name">CODE</h1>
             <p>I write code. Check out my projects.</p>
-            <a href="#projects" class="scroll-down-button">
+            <a href="#projects-gallery" class="scroll-down-button">
                 <i class='fas fa-arrow-circle-down'></i>
             </a>
         </div>
     </div>
 
-    <div class="projects-gallery">
+    <div class="projects-gallery" id="projects-gallery">
         <div class="project">
-            <div class="project-title">
-                <h2>Evolutionary Crossword Grid Shape Generation</h2>
-            </div>
             <div class="project-content" id="crossword">  
                 <div class="project-image">
                     <img src="../public/images/empty_crossword.JPG">
                 </div>
                 <div class="project-overview">
+                    <div class="project-title">
+                        <h2>Evolutionary Crossword Grid Shape Generation</h2>
+                    </div>
                     <div class="project-text">
                         <p>This is a tool created to aid crossword constructors 
                         in selecting a grid shape for their puzzle, that is, which cells in the crossword 
@@ -69,6 +69,56 @@
                             be extremely computationally intensive. The best performing grid shapes are then selected to give rise to subsequent generations.</p>
                     </div>
                     <button type="button" class="github-repo"><a href="https://github.com/nick-knudsen/gridfinder">Github Repo</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-content" id="playlist">  
+                <div class="project-overview">
+                    <div class="project-title">
+                        <h2>Listening Habit Based Automatic Playlist Generation</h2>
+                    </div>
+                    <div class="project-text">
+                        <p>This tool aims to create playlists based on a user's listening habits. To do this, it pulls the user's listening history from Last.fm, a site
+                            which tracks each instance of a listen to a song. These instances are referred to as "scrobbles." At their core, playlists are a grouping of tracks
+                            related to each other in some way. Often, playlists are designed to be cohesive in terms of mood, genre, and sound. This is the kind of playlist whose 
+                            creation I have sought to automate with this project.</p>
+                        <p>The underlying premise is that on average, tracks played in relative proximity to each other are more likely to be related in this way than tracks that are not
+                            played in relative proximity to each other. Over time, listeners are naturally building up a network of these track relationships by the way they listen to music. An
+                            auto-generated playlist can then be created by the user simply by seeding it with the selection of a few tracks. Tracks which are most closely linked by the network to these 
+                            seed tracks are then used to fill out the rest of the playlist.</p>
+                        <p>The playlist can also be tuned simply by tweaking several hyperparameters such as node distance and pruning, or filtered by different track characteristics such as genre or tempo. 
+                            In the future, I hope to expand this tool to explore other users track proximity webs, which would increase network breadth and density, allowing for more diverse playlist generation. 
+                            The trade-off with this approach is that playlists would not be as tuned to a user's personal listening habits.
+                        </p>
+                        
+                    </div>
+                    <button type="button" class="github-repo"><a href="https://github.com/nick-knudsen/autoplay">Github Repo</a></button>
+                </div>
+                <div class="project-image">
+                    <img src="../public/images/playlist_generation.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-content" id="crossword">  
+                <div class="project-image">
+                    <img src="../public/images/spotify.png">
+                </div>
+                <div class="project-overview">
+                    <div class="project-title">
+                        <h2>Spotify Podcast Ad Skipping</h2>
+                    </div>
+                    <div class="project-text">
+                        <p>This project is under early development but aims to automate skipping ads in Spotify podcasts. Many Spotify podcasts 
+                        have ads embedded directly into the track, as opposed to playing over it as a pop-up. This allows the user to trivially skip ahead to the 
+                        point where the podcast content resumes. This is not a big deal, but can be annoying when listening to a podcast while driving, in the shower, doing chores,
+                        or any activity where either the user's hands are both engaged or the device is not easily accessible.</p>
+                        <p>Through the Spotify API, by randomly sampling the podcast content, a model can be trained to detect when an ad is playing, and search in the vicinity of the ad to find the start and end points. 
+                        The API can then be used to seek to the endpoint of the ad once the startpoint of the ad is reached, providing a seamless listening experience.
+                        </p>
+                    </div>
+                    <button type="button" class="github-repo"><a href="https://github.com/nick-knudsen/">Github Repo</a></button>
                 </div>
             </div>
         </div>
