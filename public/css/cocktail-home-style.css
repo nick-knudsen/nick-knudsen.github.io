@@ -99,25 +99,27 @@ div.hero-text>p {
     padding: 1%;
     width: 100%;
     box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .image-gallery .column {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    flex-grow: 1;
+    width: 100%;
 }
 
 .image-item {
     position: relative;
     display: flex;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     flex-direction: column;
-    height: 100%;
+    height: auto;
 }
 
 .image-item img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
     object-fit: cover;
 }
@@ -148,4 +150,16 @@ div.hero-text>p {
 .image-gallery::after {
     content: "";
     flex-grow: 999;
+}
+
+@media (min-width: 600px) {
+    .image-gallery .column {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (min-width: 900px) {
+    .image-gallery .column {
+        width: calc(33.33% - 10px);
+    }
 }
