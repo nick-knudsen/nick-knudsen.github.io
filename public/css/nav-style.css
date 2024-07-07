@@ -33,11 +33,13 @@ header>nav.light>ul {
     background: linear-gradient(rgba(255, 255, 255, 0.7), transparent 100%);
 }
 
-nav.dark a {
+nav.dark a,
+nav.dark i {
     color: white;
 }
 
-nav.light a {
+nav.light a,
+nav.light i {
     color: black;
 }
 
@@ -63,7 +65,6 @@ header>nav a {
 }
 
 header>nav .fa {
-    color: white;
     display: none;
 }
 
