@@ -36,14 +36,22 @@ links.forEach(link => {
 
 // fade in and slide up
 document.addEventListener("DOMContentLoaded", function() {
+    const body = document.body;
     const portrait = document.getElementById('portrait');
     const aboutText = document.getElementById('about-text');
     const menuToggle = document.getElementById('menu-toggle');
-    const dropdownMenu = document.getElementById('dropdown-menu');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    const closeIcon = mobileOverlay.querySelector('.close-icon');
 
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', function(event) {
+        mobileOverlay.classList.toggle('active');
         menuToggle.classList.toggle('active');
-
+        body.classList.toggle('overlay-active');
+    });
+    closeIcon.addEventListener('click', function(event) {
+        mobileOverlay.classList.remove('active');
+        menuToggle.classList.remove('active');
+        body.classList.remove('overlay-active');
     });
 
     if (portrait && aboutText) {

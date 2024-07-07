@@ -16,13 +16,28 @@
     <header>
         <nav class="dark">
             <ul>
+                <li class="fa" id="home-mobile"><a href=".."><i class="fa-solid fa-house"></i></a></li>
                 <li id="home"><a href="..">Home</a></li>
-                <li><a href="/cocktails">Cocktails</a></li>
-                <li><a href="/code">Code</a></li>
-                <li><a href="/photography">Photography</a></li>
+                <li><a href="cocktails">Cocktails</a></li>
+                <li><a href="code">Code</a></li>
+                <li><a href="photography">Photography</a></li>
+                <li id="menu-toggle"><i class="fa fa-bars"></i></li>
             </ul>
         </nav>
     </header>
+
+    <div class="mobile-overlay" id="mobile-overlay">
+        <div class="menu-container">
+            <ul class="menu-options">
+                <li><a href="cocktails">Cocktails</a></li>
+                <li><a href="code">Code</a></li>
+                <li><a href="photography">Photography</a></li>
+            </ul>
+            <div class="close-icon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
 
     <div class="cocktail-photo">
         <img src="../../public/images/cocktails/tannin_bombs_wide.jpg" id="tannin_bombs">
