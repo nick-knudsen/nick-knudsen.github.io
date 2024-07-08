@@ -226,7 +226,7 @@ div.hero-text>p {
     border-radius: 50%;
     aspect-ratio: 1/1;
     object-position: center top;
-    z-index: 9998;
+    z-index: 998;
 }
 
 @keyframes fadeInUp {
@@ -252,7 +252,7 @@ div.hero-text>p {
 
 #about-text {
     padding: 10em;
-    z-index: 9999;
+    z-index: 999;
 }
 
 #about p {
@@ -338,7 +338,7 @@ div.hero-text>p {
         height: auto;
         position: static;
         top: 10%;
-        z-index: 10000;
+        z-index: 1000;
     }
 
     .scrolling-half-left,

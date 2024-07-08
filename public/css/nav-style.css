@@ -6,7 +6,7 @@ header {
     left: 0;
     font-size: 1.25em;
     border: inherit;
-    z-index: 999;
+    z-index: 10000;
 }
 
 header > nav {
