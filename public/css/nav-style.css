@@ -175,6 +175,7 @@ footer>ul .fa {
         margin-top: 0.5em;
         position: relative;
         transition: transform 0.3s ease;
+        transform-origin: 50% 40%;
     }
 
     #menu-toggle.active {
