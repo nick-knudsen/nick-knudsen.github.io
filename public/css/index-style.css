@@ -78,8 +78,7 @@ div.hero-text>p {
     display: flex;
 }
 
-.sticky-half-left, 
-.sticky-half-right {
+.sticky-half {
     width: 50%;
     position: sticky;
     display: flex;
@@ -142,7 +141,9 @@ div.hero-text>p {
     text-decoration: none;
 }
 
-.scrolling-half-left {
+.scrolling-half {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     position: relative;
     top: 0;
@@ -151,28 +152,15 @@ div.hero-text>p {
     overflow: hidden;
 }
 
-.scrolling-half-right {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    position: relative;
-    top: 0;
+.scrolling-half.left {
+    left: 0;
+}
+
+.scrolling-half.right {
     right: 0;
-    height: 100%;
-    overflow: hidden;
 }
 
-.scrolling-half-left:before {
-    content: '';
-    position: absolute;
-    /* width: 50%; */
-    height: 300%; /* Adjust the value for more or less parallax effect */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.scrolling-half-right:before {
+.scrolling-half:before {
     content: '';
     position: absolute;
     width: 50%;
@@ -186,9 +174,18 @@ div.hero-text>p {
     position: relative;
     width: 100%;
     height: 33.333%; /* Divide by the number of images to evenly distribute space */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+.parallax-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 30% 70%;
+}
+
+#astro img{
+    object-position: 50% 50%;
 }
 
 .overlay {
@@ -211,7 +208,7 @@ div.hero-text>p {
     height: 225vh;
 }
 
-#about > .scrolling-half-right {
+#about > .scrolling-half {
     background-image: linear-gradient(var(--global-background-color) 0%, white 25%, white 75%, var(--global-background-color) 100%);
     color: black;
 }
@@ -226,7 +223,7 @@ div.hero-text>p {
     border-radius: 50%;
     aspect-ratio: 1/1;
     object-position: center top;
-    z-index: 998;
+    z-index: 999;
 }
 
 @keyframes fadeInUp {
@@ -261,45 +258,6 @@ div.hero-text>p {
     font-size: 1.5em;
 }
 
-#cocktails .parallax-image:nth-child(1) {
-    background-image: url('../images/cocktails/fjords_wide.jpg');
-    background-position-x: 30%;
-}
-
-#cocktails .parallax-image:nth-child(2) {
-    background-image: url('../images/cocktails/honey_shrub.jpg');
-    background-position-y: 70%;
-}
-
-#cocktails .parallax-image:nth-child(3) {
-    background-image: url('../images/cocktails/mustard_wide_1.jpg');
-}
-
-#code .parallax-image:nth-child(1) {
-    background-image: url('../images/empty_crossword.JPG');
-}
-
-#code .parallax-image:nth-child(2) {
-    background-image: url('../images/playlist_generation.jpg');
-}
-
-#code .parallax-image:nth-child(3) {
-    background-image: url('../images/spotify.png');
-}
-
-#photography .parallax-image:nth-child(1) {
-    background-image: url('../images/photography/eclipse_composite_landscape.jpg');
-}
-
-#photography .parallax-image:nth-child(2) {
-    background-image: url('../images/photography/DSC_4910.jpg');
-    background-position-x: 10%;
-}
-
-#photography .parallax-image:nth-child(3) {
-    background-image: url('../images/photography/DSC_2480.jpg');
-}
-
 @media (max-width: 899px) {
     .hero-image {
         background-position-y: 80%;
@@ -332,22 +290,20 @@ div.hero-text>p {
         width: 100%;
     }
 
-    .sticky-half-left,
-    .sticky-half-right {
+    .sticky-half {
         width: 100%;
         height: auto;
         position: static;
         top: 10%;
-        z-index: 1000;
+        z-index: 999;
     }
 
-    .scrolling-half-left,
-    .scrolling-half-right {
+    .scrolling-half {
         width: 100%;
         height: 300vh;
     }
 
-    #about > .scrolling-half-right {
+    #about > .scrolling-half {
         background-image: var(--global-background-color);
         color: white;
     }
