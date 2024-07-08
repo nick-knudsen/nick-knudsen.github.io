@@ -116,17 +116,13 @@ div.hero-text>p {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: ease-in-out 0.5s;
-    background-color: transparent;
-    color: transparent;
+    transition: opacity 0.5s ease-in-out;
+    background-color: rgba(0 ,0, 0, 0.5);
+    color: white;
+    opacity: 0;
     font-size: 2em;
     text-align: center;
     z-index: 1;
-}
-
-.image-item:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
 }
 
 .image-item .overlay h3 {
@@ -153,6 +149,15 @@ div.hero-text>p {
     .column {
         flex: 1 0 100%;
     }
+
+    .image-item .overlay {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .image-item .overlay.visible {
+        opacity: 1;
+    }
 }
 /* three columns on large screens */
 @media (min-width: 900px) {
@@ -162,5 +167,9 @@ div.hero-text>p {
     .hero-image {
         background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_cocktails.jpg");
         background-position: bottom;
+    }
+
+    .image-item:hover .overlay {
+        opacity: 1;
     }
 }
