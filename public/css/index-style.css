@@ -298,6 +298,11 @@ div.hero-text>p {
 
     .parallax-image {
         height: 100vw;
+        margin-bottom: 5%;
+    }
+
+    .parallax-image img {
+        border-radius: 20px;
     }
 
     .sticky-half.right,
@@ -309,7 +314,7 @@ div.hero-text>p {
         order: 0;
         background-color: rgba(34, 34, 34, 0.9);
         padding: 10% 0% 5%;
-        border-radius: 10px;
+        border-radius: 20px;
     }
 
     .scrolling-half.right,
@@ -321,6 +326,7 @@ div.hero-text>p {
     .overlay {
         opacity: 0;
         transition: opacity 1s ease-in-out;
+        border-radius: 20px;
     }
 
     .overlay.visible {
