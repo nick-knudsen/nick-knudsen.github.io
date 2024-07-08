@@ -42,6 +42,27 @@ document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileOverlay = document.getElementById('mobile-overlay');
     const closeIcon = mobileOverlay.querySelector('.close-icon');
+    const imageOverlays = document.querySelectorAll('.overlay');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.25
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, observerOptions);
+
+    imageOverlays.forEach(overlay => {
+        observer.observe(overlay);
+    });
 
     menuToggle.addEventListener('click', function(event) {
         mobileOverlay.classList.toggle('active');
