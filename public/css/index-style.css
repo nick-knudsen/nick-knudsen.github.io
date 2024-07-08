@@ -72,6 +72,7 @@ div.hero-text>p {
 .fa-arrow-circle-down:hover {
     transform: scale(1.2);
 }
+
 .parallax-section {
     position: relative;
     height: 300vh;
@@ -89,6 +90,15 @@ div.hero-text>p {
     height: 100vh;
     color: white;
 
+}
+
+.sticky-half.left {
+    left: 0;
+    order: 0;
+}
+.sticky-half.right {
+    right: 0;
+    order: 1;
 }
 
 .parallax-section h2 {
@@ -154,10 +164,12 @@ div.hero-text>p {
 
 .scrolling-half.left {
     left: 0;
+    order: 0;
 }
 
 .scrolling-half.right {
     right: 0;
+    order: 1;
 }
 
 .scrolling-half:before {
