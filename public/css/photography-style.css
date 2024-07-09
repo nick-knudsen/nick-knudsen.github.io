@@ -18,14 +18,6 @@ body {
     background-color: var(--global-background-color);
 }
 
-header>nav>ul {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent 100%);
-}
-
-nav a {
-    color: white;
-}
-
 .hero-image {
     width: 100%;
     height: 100vh;

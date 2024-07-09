@@ -6,7 +6,7 @@ header {
     left: 0;
     font-size: 1.25em;
     border: inherit;
-    z-index: 1000000;
+    z-index: 999999;
 }
 
 header > nav {
@@ -50,7 +50,6 @@ header >nav li {
     border: inherit;
     position: relative;
     transition: ease-in-out 0.3s;
-    /* z-index: 9999999; */
 }
 
 header>nav>ul>#home {
@@ -70,6 +69,10 @@ header>nav .fa {
     display: none;
 }
 
+#mobile-nav-background {
+    display: none;
+}
+
 .mobile-overlay {
     display: block;
     position: fixed;
@@ -79,7 +82,7 @@ header>nav .fa {
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
     opacity: 0;
-    z-index: 999999;
+    z-index: 99999;
     pointer-events: none;
     transition: .3s ease;
     overflow-y: auto;
@@ -148,8 +151,10 @@ footer>ul .fa {
         align-items: center;
     }
 
-    header > nav > ul {
+    header > nav.dark > ul,
+    header > nav.light > ul {
         width: 100vw;
+        background: transparent;
     }
 
     header>nav li:not(:has(i)) {
@@ -162,6 +167,15 @@ footer>ul .fa {
 
     header>nav .fa {
         display: block;
+    }
+
+    #mobile-nav-background {
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 60px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 100%);
+        z-index: 998;
     }
 
     #home-mobile {
