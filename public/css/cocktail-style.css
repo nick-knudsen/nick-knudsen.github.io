@@ -2,7 +2,6 @@
     --global-background-color: #222;
 }
 
-
 html,
 body {
     width: 100%;
@@ -17,85 +16,13 @@ body {
     background-color: var(--global-background-color);
 }
 
-.overlay {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    
-    z-index: -1;
-}
-
-#overlay_black {
-    background: linear-gradient(to right, black 30%, transparent 35%, transparent 65%, black 70%);
-}
-
-#overlay_white {
-    background: linear-gradient(to right, white 30%, transparent 35%, transparent 65%, white 70%);
-}
-
-#overlay_brown {
-    background: linear-gradient(to right, rgb(59, 40, 10) 30%, transparent 35%, transparent 65%, rgb(59, 40, 10) 70%);
-
-}
-
 .cocktail-photo img {
-    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    /* width: 100%; */
     position: fixed;
     z-index: -2;
-}
-
-#fuji {
-    margin-top: 0%;
-}
-
-#fjords {
-    margin-top: -7.5%;
-}
-
-#mustard {
-    margin-top: -5%;
-}
-
-#pear {
-    margin-top: -15%;
-}
-
-#tannin_bombs {
-    margin-top: -5%;
-}
-
-#avochata {
-    width:50%;
-    margin-left: 25%;
-    margin-top: -12.5%;
-}
-
-#bumpkin {
-    margin-top: -13.5%;
-}
-
-#high_sobriety {
-    width:50%;
-    margin-left: 25%;
-    margin-top: -15%;
-}
-
-#tennessillin {
-    width: 50%;
-    margin-left: 25%;
-    margin-top: -15%;
-}
-
-#honey_shrub {
-    width: 50%;
-    margin-left: 25%;
-    margin-top: -15%;
-}
-
-#coconut_mocha {
-    width: 50%;
-    margin-left: 25%;
-    margin-top: -20%;
 }
 
 h1,
@@ -204,4 +131,85 @@ h2 {
 
 .about p {
     padding: 0em 5em;
+}
+
+@media (max-width: 899px) {
+    
+}
+
+@media (min-width: 900px) {
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        
+        z-index: -1;
+    }
+    
+    #overlay_black {
+        background: linear-gradient(to right, black 30%, transparent 35%, transparent 65%, black 70%);
+    }
+    
+    #overlay_white {
+        background: linear-gradient(to right, white 30%, transparent 35%, transparent 65%, white 70%);
+    }
+    
+    #overlay_brown {
+        background: linear-gradient(to right, rgb(59, 40, 10) 30%, transparent 35%, transparent 65%, rgb(59, 40, 10) 70%);
+    
+    }
+
+    #fuji {
+        margin-top: 0%;
+    }
+    
+    #fjords {
+        margin-top: -7.5%;
+    }
+    
+    #mustard {
+        margin-top: -5%;
+    }
+    
+    #pear {
+        margin-top: -15%;
+    }
+    
+    #tannin_bombs {
+        margin-top: -5%;
+    }
+    
+    #avochata {
+        width:50%;
+        margin-left: 25%;
+        /* margin-top: -12.5%; */
+    }
+    
+    #bumpkin {
+        margin-top: -13.5%;
+    }
+    
+    #high_sobriety {
+        width:50%;
+        margin-left: 25%;
+        margin-top: -15%;
+    }
+    
+    #tennessillin {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -15%;
+    }
+    
+    #honey_shrub {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -15%;
+    }
+    
+    #coconut_mocha {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: -20%;
+    }
 }

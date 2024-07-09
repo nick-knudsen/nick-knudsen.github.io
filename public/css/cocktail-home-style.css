@@ -135,12 +135,13 @@ div.hero-text>p {
 }
 
 .blurb h2 {
-    font-size: 3em;
+    font-size: 4em;
     text-align: center;
 }
 
 .blurb p {
     padding: 0 4em;
+    font-size: 1.5em;
     text-align: justify;
 }
 
@@ -157,6 +158,12 @@ div.hero-text>p {
 
     .image-item .overlay.visible {
         opacity: 1;
+    }
+
+    .blurb p {
+        padding: 1em;
+        font-size: 0.6em;
+        text-align: left;
     }
 }
 /* three columns on large screens */
