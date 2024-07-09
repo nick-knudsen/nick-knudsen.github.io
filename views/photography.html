@@ -51,7 +51,11 @@
     </div>
 
     <div class="gallery-container">
-        <ul class="image-gallery" id="imageGallery">
+        <div class="gallery-controls">
+            <button id="tile-view-button" class="active"><i class="fas fa-th"></i></button>
+            <button id="timeline-view-button"><i class="fa-solid fa-image"></i></button>
+        </div>
+        <ul class="image-gallery tile-view" id="imageGallery">
             <!-- Dynamically load gallery images -->
         </ul>
     </div>
@@ -69,7 +73,6 @@
 
     <script src="../public/js/photography.js"></script>
     <script src="../public/js/animations.js"></script>
-    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 
 </body>
 

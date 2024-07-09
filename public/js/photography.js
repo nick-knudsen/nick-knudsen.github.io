@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const listItem = document.createElement('li');
                 const img = document.createElement('img');
                 img.src = `public/images/photography/${src}`;
-                img.loading= 'lazy';
+                // img.loading= 'lazy';
                 listItem.appendChild(img);
                 gallery.appendChild(listItem);
             });
@@ -28,12 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function initializeFullView() {
 
+    const imageGallery = document.querySelector('.image-gallery');
     const images = document.querySelectorAll('.image-gallery img');
-
-    // Full view image functionality
+    
     images.forEach(image => {
+
         image.addEventListener('click', function () {
-            if (window.innerWidth > 899) {
+            // Full view image functionality
+            if (imageGallery.classList.contains('tile-view')) {
                 let existingFullView = document.querySelector('.full-view');
                 if (existingFullView) {
                     existingFullView.remove();
@@ -63,9 +65,6 @@ function initializeFullView() {
                     // Restore the scroll position
                     window.scrollTo(0, scrollY);
                 });
-            } else {
-                const container = document.createElement('div');
-                constainer.classList.add('pinch-zoom-container');
             }
         });
     });
@@ -85,3 +84,47 @@ function getScrollbarWidth() {
 
     return scrollbarWidth;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    let scrollElementIndex = 0;
+
+    function getVisibleElementIndex() {
+        const images = document.querySelectorAll('.image-gallery li');
+        for (let i = 0; i < images.length; i++) {
+            const rect = images[i].getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    function scrollToElement(index) {
+        const images = document.querySelectorAll('.image-gallery li');
+        if (images[index]) {
+            images[index].scrollIntoView();
+        }
+    }
+
+    function selectTileView() {
+        scrollElementIndex = getVisibleElementIndex();
+        document.querySelector('.image-gallery').classList.remove('timeline-view');
+        document.querySelector('.image-gallery').classList.add('tile-view');
+        document.getElementById('tile-view-button').classList.add('active');
+        document.getElementById('timeline-view-button').classList.remove('active');
+        scrollToElement(scrollElementIndex);
+    }
+
+    function selectTimelineView() {
+        scrollElementIndex = getVisibleElementIndex();
+        document.querySelector('.image-gallery').classList.remove('tile-view');
+        document.querySelector('.image-gallery').classList.add('timeline-view');
+        document.getElementById('timeline-view-button').classList.add('active');
+        document.getElementById('tile-view-button').classList.remove('active');
+        scrollToElement(scrollElementIndex);
+    }
+
+    // Attach functions to buttons
+    document.getElementById('tile-view-button').addEventListener('click', selectTileView);
+    document.getElementById('timeline-view-button').addEventListener('click', selectTimelineView);
+});

@@ -88,6 +88,12 @@ div.hero-text>p {
 
 .gallery-container {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gallery-controls {
+    display: none;
 }
 
 .image-gallery {
@@ -126,7 +132,7 @@ div.hero-text>p {
     width: 100vw;
     height: 100vh;
     object-fit: contain;
-    z-index: 9999;
+    z-index: 999;
     border-radius: 0;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -142,7 +148,36 @@ div.hero-text>p {
         background-position-x: 30%;
     }
 
-    .image-gallery li {
+    .gallery-controls {
+        display: flex;
+        position: sticky;
+        top: 0;
+        width: 35%;
+        align-self: center;
+        justify-content: space-between;
+        padding: 0.5em;
+        z-index: 999;
+    }
+
+    .gallery-controls button {
+        border: none;
+        background: none;
+        color: white;
+        font-size: 1.25em;
+        border-radius: 50%;
+        padding: 0.5em;
+    }
+
+    .gallery-controls button.active {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .image-gallery.timeline-view li {
         height: auto; 
+    }
+
+    .image-gallery.tile-view li {
+        width: 30vw;
+        height: 30vw;
     }
 }
