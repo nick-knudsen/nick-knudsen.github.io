@@ -33,35 +33,40 @@ function initializeFullView() {
     // Full view image functionality
     images.forEach(image => {
         image.addEventListener('click', function () {
-            let existingFullView = document.querySelector('.full-view');
-            if (existingFullView) {
-                existingFullView.remove();
+            if (window.innerWidth > 899) {
+                let existingFullView = document.querySelector('.full-view');
+                if (existingFullView) {
+                    existingFullView.remove();
+                }
+
+                const fullViewImage = document.createElement('img');
+                fullViewImage.src = image.src;
+                fullViewImage.classList.add('full-view');
+                document.body.appendChild(fullViewImage);
+
+                // Save the current scroll position
+                const scrollY = window.scrollY;
+                // Maintain the scrollbar while preventing scrolling
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.top = `-${scrollY}px`;
+                document.body.style.paddingRight = `${getScrollbarWidth()}px`;
+
+                fullViewImage.addEventListener('click', function () {
+                    fullViewImage.remove();
+
+                    // re-enable scrolling
+                    document.body.style.overflow = '';
+                    document.body.style.paddingRight = '';
+                    document.body.style.position = '';
+                    document.body.style.top = '';
+                    // Restore the scroll position
+                    window.scrollTo(0, scrollY);
+                });
+            } else {
+                const container = document.createElement('div');
+                constainer.classList.add('pinch-zoom-container');
             }
-
-            const fullViewImage = document.createElement('img');
-            fullViewImage.src = image.src;
-            fullViewImage.classList.add('full-view');
-            document.body.appendChild(fullViewImage);
-
-            // Save the current scroll position
-            const scrollY = window.scrollY;
-            // Maintain the scrollbar while preventing scrolling
-            document.body.style.overflow = 'hidden';
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${scrollY}px`;
-            document.body.style.paddingRight = `${getScrollbarWidth()}px`;
-
-            fullViewImage.addEventListener('click', function () {
-                fullViewImage.remove();
-
-                // re-enable scrolling
-                document.body.style.overflow = '';
-                document.body.style.paddingRight = '';
-                document.body.style.position = '';
-                document.body.style.top = '';
-                // Restore the scroll position
-                window.scrollTo(0, scrollY);
-            });
         });
     });
 }
