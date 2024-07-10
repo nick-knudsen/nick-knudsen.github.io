@@ -27,7 +27,7 @@
             </ul>
         </nav>
     </header>
-
+    <div id="mobile-nav-background" class="dark"></div>
     <div class="mobile-overlay" id="mobile-overlay">
         <div class="menu-container">
             <ul class="menu-options">
@@ -51,7 +51,11 @@
         </div>
     </div>
 
-    <div class="image-gallery" id="cocktail-gallery">
+    <div class="image-gallery timeline-view" id="cocktail-gallery">
+        <div class="gallery-controls">
+            <button id="tile-view-button"><i class="fas fa-th"></i></button>
+            <button id="timeline-view-button" class="active"><i class="fa-solid fa-image"></i></button>
+        </div>
         <div class="column">
             <div class="image-item">
                 <img src="../public/images/cocktails/fjords_tall.jpg">
@@ -209,6 +213,7 @@
     </footer>
 
     <script src="../public/js/animations.js"></script>
+    <script src="../public/js/cocktails.js"></script>
 </body>
 
 </html>
