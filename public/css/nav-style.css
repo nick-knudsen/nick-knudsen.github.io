@@ -7,6 +7,7 @@ header {
     font-size: 1.25em;
     border: inherit;
     z-index: 999999;
+    pointer-events: none;
 }
 
 header > nav {
@@ -50,6 +51,7 @@ header >nav li {
     border: inherit;
     position: relative;
     transition: ease-in-out 0.3s;
+    pointer-events: all;
 }
 
 header>nav>ul>#home {
