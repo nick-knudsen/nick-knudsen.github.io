@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_home_2.jpg");
+    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/photography/spiderweb.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +33,7 @@ body {
 
     text-align: center;
     font-size: 1.1em;
-    color: black;
+    color: white;
 }
 
 h1,
@@ -42,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: black;
+    color: white;
     font-family: 'Tenor Sans';
     font-weight: 600;
 }
@@ -63,7 +63,7 @@ div.hero-text>p {
 }
 
 .fa-arrow-circle-down {
-    color: black;
+    color: white;
     font-size: 2em;
     text-decoration: none;
     transition-duration: 0.4s;
@@ -312,9 +312,9 @@ div.hero-text>p {
         top: 0%;
         z-index: 999;
         order: 0;
-        background-color: rgba(34, 34, 34, 0.9);
-        padding: 10% 0% 5%;
-        border-radius: 20px;
+        background-color: linear-gradient(rgba(34, 34, 34, 0.9) 0%, rgba(34, 34, 34, 0.9) 50%, transparent 50%);
+        padding: 1% 0% 1%;
+        border-radius: 0 0 20px 20px;
     }
 
     .scrolling-half.right,

@@ -174,8 +174,15 @@ footer>ul .fa {
         position: fixed;
         width: 100vw;
         height: 60px;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 100%);
         z-index: 998;
+    }
+
+    #mobile-nav-background.dark {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 100%);
+    }
+
+    #mobile-nav-background.light {
+        background: linear-gradient(rgba(255, 255, 255, 0.7), transparent 100%);
     }
 
     #home-mobile {
