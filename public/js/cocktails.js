@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function selectTileView() {
         scrollElementIndex = getVisibleElementIndex();
-        document.querySelector('.image-gallery').classList.remove('timeline-view');
-        document.querySelector('.image-gallery').classList.add('tile-view');
+        document.querySelector('.gallery-container').classList.remove('timeline-view');
+        document.querySelector('.gallery-container').classList.add('tile-view');
         document.getElementById('tile-view-button').classList.add('active');
         document.getElementById('timeline-view-button').classList.remove('active');
         scrollToElement(scrollElementIndex);
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function selectTimelineView() {
         scrollElementIndex = getVisibleElementIndex();
-        document.querySelector('.image-gallery').classList.remove('tile-view');
-        document.querySelector('.image-gallery').classList.add('timeline-view');
+        document.querySelector('.gallery-container').classList.remove('tile-view');
+        document.querySelector('.gallery-container').classList.add('timeline-view');
         document.getElementById('timeline-view-button').classList.add('active');
         document.getElementById('tile-view-button').classList.remove('active');
         scrollToElement(scrollElementIndex);
