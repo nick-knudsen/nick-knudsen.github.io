@@ -16,13 +16,14 @@ body {
     background-color: var(--global-background-color);
 }
 
-.cocktail-photo img {
+.cocktail-photo {
     height: 100vh;
-    object-fit: cover;
-    object-position: center;
-    /* width: 100%; */
+    width: 100%;
     position: fixed;
     z-index: -2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1,
@@ -32,8 +33,12 @@ h2 {
 }
 
 .hero-text {
-    padding-top: 14vw;
-    padding-bottom: 15vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-top: 14vw;
+    padding-bottom: 15vw; */
 
     text-align: center;
     font-size: 1.1em;
@@ -41,13 +46,14 @@ h2 {
 }
 
 div.hero-text>h1 {
-    font-size: 6vw;
+    font-size: 3em;
     margin-bottom: 0;
     margin-top: 0;
 }
 
 div.hero-text>p {
     font-size: 1.2em;
+    padding: 1em;
 }
 
 .fa-arrow-circle-down {
@@ -100,6 +106,7 @@ h2 {
 
 .prep-item {
     width: 40%;
+    box-sizing: border-box;
     padding: 0em 2em;
 }
 
@@ -134,7 +141,67 @@ h2 {
 }
 
 @media (max-width: 899px) {
+    #avochata {
+        background-image: url('../../public/images/cocktails/avochata_tall_1.jpg')
+    }
+
+    #bruto {
+        background-image: url('../../public/images/cocktails/bruto_tall.jpg')
+    }
     
+    #bumpkin {
+        background-image: url('../../public/images/cocktails/bumpkin_tall.jpg')
+    }
+
+    #coconut-mocha {
+        background-image: url('../../public/images/cocktails/coconut_mocha_negroni_1.jpg')
+    }
+
+    #colonel-mustard {
+        background-image: url('../../public/images/cocktails/mustard_tall.jpg')
+    }
+
+    #fjords {
+        background-image: url('../../public/images/cocktails/fjords_tall.jpg')
+    }
+
+    #fuji {
+        background-image: url('../../public/images/cocktails/mt_fuji_tall.jpg')
+    }
+
+    #high-sobriety {
+        background-image: url('../../public/images/cocktails/high_sobriety.jpg')
+    }
+
+    #honey-shrub {
+        background-image: url('../../public/images/cocktails/honey_shrub.jpg')
+    }
+
+    #pear-noel {
+        background-image: url('../../public/images/cocktails/pear_noel_tall.jpg')
+    }
+
+    #tannin-bombs {
+        background-image: url('../../public/images/cocktails/tannin_bombs_tall.jpg')
+    }
+
+    #tennessillin {
+        background-image: url('../../public/images/cocktails/tennessillin.jpg')
+    }
+
+    .prep-list {
+        flex-direction: column;
+    }
+
+    .prep-item {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .about p {
+        text-align: left;
+        padding: 1em;
+    }
 }
 
 @media (min-width: 900px) {
@@ -159,57 +226,51 @@ h2 {
     
     }
 
-    #fuji {
-        margin-top: 0%;
-    }
-    
-    #fjords {
-        margin-top: -7.5%;
-    }
-    
-    #mustard {
-        margin-top: -5%;
-    }
-    
-    #pear {
-        margin-top: -15%;
-    }
-    
-    #tannin_bombs {
-        margin-top: -5%;
-    }
-    
     #avochata {
-        width:50%;
-        margin-left: 25%;
-        /* margin-top: -12.5%; */
+        background-image: url('../../public/images/cocktails/avochata_wide.jpg')
+    }
+
+    #bruto {
+        background-image: url('../../public/images/cocktails/bruto_wide.jpg')
     }
     
     #bumpkin {
-        margin-top: -13.5%;
+        background-image: url('../../public/images/cocktails/bumpkin_wide.jpg')
     }
-    
-    #high_sobriety {
-        width:50%;
-        margin-left: 25%;
-        margin-top: -15%;
+
+    #coconut-mocha {
+        background-image: url('../../public/images/cocktails/coconut_mocha_negroni_1.jpg')
     }
-    
+
+    #colonel-mustard {
+        background-image: url('../../public/images/cocktails/mustard_wide_1.jpg')
+    }
+
+    #fjords {
+        background-image: url('../../public/images/cocktails/fjords_wide.jpg')
+    }
+
+    #fuji {
+        background-image: url('../../public/images/cocktails/mt_fuji_wide.jpg')
+    }
+
+    #high-sobriety {
+        background-image: url('../../public/images/cocktails/high_sobriety.jpg')
+    }
+
+    #honey-shrub {
+        background-image: url('../../public/images/cocktails/honey_shrub.jpg')
+    }
+
+    #pear-noel {
+        background-image: url('../../public/images/cocktails/pear_noel_wide.jpg')
+    }
+
+    #tannin-bombs {
+        background-image: url('../../public/images/cocktails/tannin_bombs_wide.jpg')
+    }
+
     #tennessillin {
-        width: 50%;
-        margin-left: 25%;
-        margin-top: -15%;
-    }
-    
-    #honey_shrub {
-        width: 50%;
-        margin-left: 25%;
-        margin-top: -15%;
-    }
-    
-    #coconut_mocha {
-        width: 50%;
-        margin-left: 25%;
-        margin-top: -20%;
+        background-image: url('../../public/images/cocktails/tennessillin.jpg')
     }
 }

@@ -23,7 +23,7 @@ function easeInOutCubic(t) {
     return t < 0.5 ? 4 * t ** 3 : 1 - ((-2 * t + 2) ** 3) / 2;
 }
 
-// Add smooth scrolling to all links with class "smooth-scroll"
+// Add smooth scrolling to all in-page links
 const links = document.querySelectorAll('a[href^="#"]');
 
 links.forEach(link => {
