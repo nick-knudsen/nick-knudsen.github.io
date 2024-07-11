@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('timeline-view-button').classList.remove('active');
         scrollToElement(scrollElementIndex);
     }
-
+    
     function selectTimelineView() {
         if (document.getElementById('timeline-view-button').classList.contains('active')) {
             return;
