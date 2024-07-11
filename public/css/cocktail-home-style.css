@@ -82,7 +82,7 @@ div.hero-text>p {
 .gallery-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
 }
 
@@ -175,12 +175,14 @@ div.hero-text>p {
 
     .gallery-controls {
         display: flex;
+        flex-shrink: 0;
+        align-items: center;
         position: sticky;
         top: 0;
+        height: 70px;
         width: 35%;
         align-self: center;
         justify-content: space-between;
-        padding: 0.5em;
         z-index: 999;
     }
 
@@ -192,7 +194,6 @@ div.hero-text>p {
         color: white;
         font-size: 1.25em;
         border-radius: 50%;
-        margin-top: 2%;
     }
 
     .gallery-controls button.active {

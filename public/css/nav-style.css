@@ -167,7 +167,7 @@ footer>ul .fa {
         background: transparent;
     }
 
-    header>nav .fa {
+    header>nav .mobile-icon {
         display: block;
     }
 
@@ -175,7 +175,7 @@ footer>ul .fa {
         display: block;
         position: fixed;
         width: 100vw;
-        height: 60px;
+        height: 70px;
         z-index: 998;
     }
 
