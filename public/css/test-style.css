@@ -82,6 +82,7 @@ div.hero-text>p {
 .gallery-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
 }
 
@@ -92,6 +93,7 @@ div.hero-text>p {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1vw;
     padding: 1%;
     list-style-type: none;
@@ -149,6 +151,22 @@ div.hero-text>p {
     flex-grow: 999;
 }
 
+.blurb {
+    width: 100%;
+    color: white;
+}
+
+.blurb h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.blurb p {
+    padding: 0 4em;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
 @media (max-width: 899px) {
     .hero-image {
         flex-shrink: 0;
@@ -168,11 +186,13 @@ div.hero-text>p {
 
     .gallery-controls button {
         border: none;
+        width: 40px;
+        height: 40px;
         background: none;
         color: white;
         font-size: 1.25em;
         border-radius: 50%;
-        padding: 0.5em;
+        margin-top: 2%;
     }
 
     .gallery-controls button.active {
@@ -200,9 +220,20 @@ div.hero-text>p {
     .image-gallery.timeline-view .overlay.visible {
         opacity: 1;
     }
+
+    .blurb p {
+        padding: 1em;
+        font-size: 0.6em;
+        text-align: left;
+    }
 }
 
 @media (min-width: 900px) {
+    .hero-image {
+        background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_cocktails.jpg");
+        background-position: bottom;
+    }
+
     .image-gallery {
         flex-direction: column;
         height: 4500px;
@@ -212,7 +243,7 @@ div.hero-text>p {
         flex-grow: 1;
         flex-shrink: 0;
         /* height: auto; */
-        width: 33vw;
+        width: 32vw;
     }
 
     .image-item:hover .overlay {
