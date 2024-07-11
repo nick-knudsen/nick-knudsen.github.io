@@ -1,31 +1,221 @@
-* {
-    box-sizing: border-box;
+:root {
+    --global-background-color: #222;
 }
 
-html, body {
+
+html,
+body {
+    width: 100%;
     height: 100%;
-    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
 
+    font-family: 'Space Mono', serif;
+    background-color: var(--global-background-color);
+}
 
-.section {
+.hero-image {
+    width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_cocktails_mobile.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#cocktails {
-    background-color: #3498db;
+.hero-text {
+    padding-top: 14vw;
+    padding-bottom: 20vw;
+
+    text-align: center;
+    font-size: 1.1em;
+    color: white;
 }
 
-#code {
-    background-color: #e74c3c;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    font-family: 'Tenor Sans';
+    font-weight: 600;
 }
 
-#photography {
-    background-color: #2ecc71;
+div.hero-text>h2 {
+    font-size: 3vw;
+    margin-top: 5vw;
+    margin-bottom: -2vw;
+}
+
+div.hero-text>h1 {
+    font-size: 6vw;
+    margin-bottom: 0;
+}
+
+div.hero-text>p {
+    font-size: 1.2em;
+}
+
+.fa-arrow-circle-down {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.fa-arrow-circle-down:hover {
+    transform: scale(1.2);
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gallery-controls {
+    display: none;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 1%;
+    list-style-type: none;
+}
+
+.image-gallery .image-item {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.image-gallery img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-item a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.image-item .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+    background-color: rgba(0 ,0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.image-item .overlay h3 {
+    font-family: 'Space Mono', serif;
+}
+
+.image-gallery::after {
+    content: "";
+    flex-grow: 999;
+}
+
+@media (max-width: 899px) {
+    .hero-image {
+        flex-shrink: 0;
+        background-position-x: 30%;
+    }
+
+    .gallery-controls {
+        display: flex;
+        position: sticky;
+        top: 0;
+        width: 35%;
+        align-self: center;
+        justify-content: space-between;
+        padding: 0.5em;
+        z-index: 999;
+    }
+
+    .gallery-controls button {
+        border: none;
+        background: none;
+        color: white;
+        font-size: 1.25em;
+        border-radius: 50%;
+        padding: 0.5em;
+    }
+
+    .gallery-controls button.active {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .image-gallery.timeline-view .image-item {
+        height: auto; 
+    }
+
+    .image-gallery.tile-view .image-item {
+        width: 32vw;
+        height: 32vw;
+        flex: none;
+    }
+
+    .image-gallery.tile-view .overlay {
+        transition: 0s;
+    }
+
+    .image-gallery.tile-view .overlay.visible {
+        opacity: 0;
+    }
+
+    .image-gallery.timeline-view .overlay.visible {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 900px) {
+    .image-gallery {
+        flex-direction: column;
+        height: 4500px;
+    }
+
+    .image-gallery .image-item {
+        flex-grow: 1;
+        flex-shrink: 0;
+        /* height: auto; */
+        width: 33vw;
+    }
+
+    .image-item:hover .overlay {
+        opacity: 1;
+    }
 }

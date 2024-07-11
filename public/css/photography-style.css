@@ -91,7 +91,7 @@ div.hero-text>p {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 1vw;
     padding: 1%;
     list-style-type: none;
 }
@@ -169,7 +169,8 @@ div.hero-text>p {
     }
 
     .image-gallery.tile-view li {
-        width: 30vw;
-        height: 30vw;
+        flex: none;
+        width: 32vw;
+        height: 32vw;
     }
 }

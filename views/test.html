@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/test-style.css">
+    <link rel="stylesheet" href="../public/css/nav-style.css">
+    <script src="https://kit.fontawesome.com/81346e6ad4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tenor+Sans">
+    <title>Nick Knudsen</title>
+</head>
+
+<body>
+    <header>
+        <nav class="dark">
+            <ul>
+                <li class="fa" id="home-mobile"><a href=".."><i class="fa-solid fa-house"></i></a></li>
+                <li id="home"><a href="..">Home</a></li>
+                <li><a href="cocktails">Cocktails</a></li>
+                <li><a href="code">Code</a></li>
+                <li><a href="photography">Photography</a></li>
+                <li id="menu-toggle"><i class="fa fa-bars"></i></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="mobile-nav-background" class="dark"></div>
+    <div class="mobile-overlay" id="mobile-overlay">
+        <div class="menu-container">
+            <ul class="menu-options">
+                <li><a href="cocktails">Cocktails</a></li>
+                <li><a href="code">Code</a></li>
+                <li><a href="photography">Photography</a></li>
+            </ul>
+            <div class="close-icon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>COCKTAILS</h1>
+            <p>I make drinks. Check out my specs.</p>
+            <a href="#imageGallery" class="scroll-down-button">
+                <i class='fas fa-arrow-circle-down'></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="gallery-container" id="cocktail-gallery">
+        <div class="gallery-controls">
+            <button id="tile-view-button"><i class="fas fa-th"></i></button>
+            <button id="timeline-view-button" class="active"><i class="fa-solid fa-image"></i></button>
+        </div>
+        <div class="image-gallery timeline-view" id="image-gallery">
+            <div class="image-item">
+                <img src="../public/images/cocktails/fjords_tall.jpg">
+                <a href="/cocktails/fjords">
+                    <div class="overlay">
+                        <h3>Pining for the Fjords</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/mt_fuji_wide.jpg">
+                <a href="/cocktails/fuji">
+                    <div class="overlay">
+                        <h3>It's Snowing on Mt. Fuji</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/avochata_wide.jpg">
+                <a href="/cocktails/avochata">
+                    <div class="overlay">
+                        <h3>Avochata</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/honey_shrub.jpg">
+                <a href="/cocktails/honey_shrub">
+                    <div class="overlay">
+                        <h3>Honey, I Shrubbed the Gin</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/mustard_tall.jpg">
+                <a href="/cocktails/colonel_mustard">
+                    <div class="overlay">
+                        <h3>Colonel Mustard in the Conservatory With the Candlestick</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/bumpkin_wide.jpg">
+                <a href="/cocktails/bumpkin">
+                    <div class="overlay">
+                        <h3>Bumpkin Spice Punch</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/tennessillin.jpg">
+                <a href="/cocktails/tennessillin">
+                    <div class="overlay">
+                        <h3>Tennessillin</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/bruto_tall.jpg">
+                <a href="/cocktails/bruto">
+                    <div class="overlay">
+                        <h3>Et tu, Bruto?</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/pear_noel_wide.jpg">
+                <a href="/cocktails/pear_noel">
+                    <div class="overlay">
+                        <h3>Pear Noël</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/tannin_bombs_wide.jpg">
+                <a href="/cocktails/tannin_bombs">
+                    <div class="overlay">
+                        <h3>The Royal Tannin Bombs</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/high_sobriety.jpg">
+                <a href="/cocktails/high_sobriety">
+                    <div class="overlay">
+                        <h3>High Sobriety</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/coconut_mocha_negroni_2.jpg">
+                <a href="/cocktails/coconut_mocha">
+                    <div class="overlay">
+                        <h3>Coconut Mocha Negroni</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blurb" id="philosophy-and-technique">
+        <h2>PHILOSOPHY AND TECHNIQUE</h2>
+        <p>
+            There are a few different ways I approach cocktail development, but all can be broken down into two categories:
+            ingredient driven, and technique driven. Sometimes I have a specific flavor profile in mind, whether because I 
+            am basing a drink off of a dish or a certain combination of flavors. For example, Colonel Mustard is based off of my 
+            favorite salad dressing, so I incorporated ingredients from that recipe, or with Pining for the Fjords, where I paired the 
+            pinecone syrup with a Douglas Fir forward gin and the piney Amaro Braulio. This is a very approachable method of development that 
+            leans upon already existing combinations of flavors that are known to work together. A great reference to have when creating drinks 
+            in this manner is the Flavor Bible, I refer to it all the time. Technique driven development I generally use to explore the possibilities 
+            of modern bartending, and usually, but not always, showcases a specific ingredient. For example, Avochata was a drink created to 
+            push the limits of agar clarification, and Fernalicious incorporates lacto-fermentation. However, these rules are not hard and fast. Often a drink will have elements of both technique and ingredient driven development. My favorite 
+            way to create a new cocktail is what Death and Co. terms a "concept drink." This is when you first come up with the name, usually something punny 
+            or fun to say, and then build the drink around that idea. This is how the Royal Tannin Bombs and High Sobriety were born. I really enjoy the challenge of 
+            making wordplay into consumable reality.
+        </p>
+        <p>
+            Cocktails are inherently an unsustainable art form. They often require spirits, liqueurs, and ingredients from around the world. Citrus is one of the worst culprits, 
+            especially in areas where it cannot be grown. During the late winter and spring, citrus can be sourced domestically, however for the remainder of the year it must be flown in 
+            from the southern hemisphere. This change also creates inconsistency in the juice, acid and sugar levels can differ widely from fruit to fruit. Finally, fresh citrus juice expires very 
+            rapidly due to oxidation. Lime juice in particular tastes horribly metallic after only 24 hours. The answer to this is super juice. 
+            Super juice is the invention of Nickel Morris, a Kentucky bartender, who created it in the late 2010s to deal with these issues. Essentially, the process involves peeling the citrus, 
+            macerating the peels in powdered citric and malic acid, then blending the result with the fresh juice and water. This greatly increases yield by up to eight times, reduces waste by not 
+            letting all that flavor in the peel go unused, and provides a more consistent product, as the acid levels will always be the same. As an added bonus the shelf life is greatly extended due to 
+            reduced concentration of succinic acid, which is to blame for the especially rapid oxidation of lime juice. In all, this results in a much more sustainable and consistent product to use behind the bar, 
+            and it reduces prep time, as you can juice once a week instead of daily. For more detail on the process check out Kevin Kos' YouTube video on super juice.
+        </p>
+        <p>
+            The best way to increase sustainability however, is to reduce or eliminate the use of non-local products as much as possible. This can be accomplished by utilizing local spirits and liqueurs, making your own 
+            liqueurs and syrups, and always using locally grown produce when available. It is possible to create some amazing drinks even while restricted to hyper-local products, for example a bar I went to in Oslo called Himkok, 
+            which sources everything in the bar from within 30km, and in 2022 made the 50 Best Bars list! Perhaps the most challenging aspect to this is finding alternative sources of acids. It is possible, you will just have to 
+            get creative with local berries, wine, vermouth, juices, and shrubs.
+        </p>
+        <p>
+            When it comes to incorporating new flavors into drinks there are myriad ways to do so: infusions, shrubs, syrups, juices, and then the question of what to infuse into, whether spirit, vermouth, or liqueur, what 
+            kind of sugar to use for the syrup, what kind of vinegar to use for the shrub. It would be easy to write a whole book on this topic, but to keep it brief, it is hard to go too wrong here. I do find that certain kinds of ingredients 
+            will perform better in different use cases. Fresh herbs I almost always choose to incorporate into a syrup, as I find it best preserves their flavor, while fruits are more versatile and can work as a shrub, syrup, juice, or infusion in vermouth. 
+            With dried ingredients I usually find myself infusing in spirits, which are more effective at extracting their flavor without cooking. 
+        </p>
+    </div>
+
+    <footer>
+        <ul>
+            <li>&copy; 2024 Nick Knudsen</li>
+            <li><a href="https://www.instagram.com/cocktail.chem/" target="_blank" class="fa fa-instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/nick-h-knudsen" target="_blank" class="fa fa-linkedin"></a></li>
+            <li><a href="https://www.flickr.com/photos/nickknudsen/" target="_blank" class="fa fa-flickr"></a></li>
+            <li><a href="https://github.com/nick-knudsen/" target="_blank" class="fa fa-github"></a></li>
+            <li><a href="mailto:nick.knudsen14@gmail.com" class="fa fa-envelope-o"></a></li>
+        </ul>
+    </footer>
+
+    <script src="../public/js/test.js"></script>
+    <script src="../public/js/animations.js"></script>
+
+</body>
+
+</html>

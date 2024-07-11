@@ -4,6 +4,7 @@ const indexRouter = require('./routes/index');
 const photographyRouter = require('./routes/photography');
 const cocktailRouter = require('./routes/cocktails');
 const codeRouter = require('./routes/code');
+const testRouter = require('./routes/test');
 const apiRouter = require('./routes/api');
 
 const app = express();
@@ -18,6 +19,7 @@ app.use('/api', apiRouter);
 app.use('/photography', photographyRouter);
 app.use('/cocktails', cocktailRouter);
 app.use('/code', codeRouter);
+app.use('/test', testRouter);
 // Use index routes
 app.use('/', indexRouter);
 
