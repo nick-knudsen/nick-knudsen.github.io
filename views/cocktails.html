@@ -4,17 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/cocktail-home-style.css">
+    <link rel="stylesheet" href="../public/css/test-style.css">
     <link rel="stylesheet" href="../public/css/nav-style.css">
     <script src="https://kit.fontawesome.com/81346e6ad4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tenor+Sans">
     <title>Nick Knudsen</title>
 </head>
 
 <body>
-
     <header>
         <nav class="dark">
             <ul>
@@ -45,119 +43,113 @@
         <div class="hero-text">
             <h1>COCKTAILS</h1>
             <p>I make drinks. Check out my specs.</p>
-            <a href="#cocktail-gallery" class="scroll-down-button">
+            <a href="#image-gallery" class="scroll-down-button">
                 <i class='fas fa-arrow-circle-down'></i>
             </a>
         </div>
     </div>
 
-    <div class="gallery-container timeline-view" id="cocktail-gallery">
+    <div class="gallery-container" id="cocktail-gallery">
         <div class="gallery-controls">
             <button id="tile-view-button"><i class="fas fa-th"></i></button>
             <button id="timeline-view-button" class="active"><i class="fa-solid fa-image"></i></button>
         </div>
-        <div class="columns-container">
-            <div class="column">
-                <div class="image-item">
-                    <img src="../public/images/cocktails/fjords_tall.jpg">
-                    <a href="/cocktails/fjords">
-                        <div class="overlay">
-                            <h3>Pining for the Fjords</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/mt_fuji_wide.jpg">
-                    <a href="/cocktails/fuji">
-                        <div class="overlay">
-                            <h3>It's Snowing on Mt. Fuji</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/avochata_wide.jpg">
-                    <a href="/cocktails/avochata">
-                        <div class="overlay">
-                            <h3>Avochata</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/honey_shrub.jpg">
-                    <a href="/cocktails/honey_shrub">
-                        <div class="overlay">
-                            <h3>Honey, I Shrubbed the Gin</h3>
-                        </div>
-                    </a>
-                </div>
+        <div class="image-gallery timeline-view" id="image-gallery">
+            <div class="image-item">
+                <img src="../public/images/cocktails/fjords_tall.jpg">
+                <a href="/cocktails/fjords">
+                    <div class="overlay">
+                        <h3>Pining for the Fjords</h3>
+                    </div>
+                </a>
             </div>
-            <div class="column">
-                <div class="image-item">
-                    <img src="../public/images/cocktails/mustard_tall.jpg">
-                    <a href="/cocktails/colonel_mustard">
-                        <div class="overlay">
-                            <h3>Colonel Mustard in the Conservatory With the Candlestick</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/bumpkin_wide.jpg">
-                    <a href="/cocktails/bumpkin">
-                        <div class="overlay">
-                            <h3>Bumpkin Spice Punch</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/tennessillin.jpg">
-                    <a href="/cocktails/tennessillin">
-                        <div class="overlay">
-                            <h3>Tennessillin</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/bruto_tall.jpg">
-                    <a href="/cocktails/bruto">
-                        <div class="overlay">
-                            <h3>Et tu, Bruto?</h3>
-                        </div>
-                    </a>
-                </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/mt_fuji_wide.jpg">
+                <a href="/cocktails/fuji">
+                    <div class="overlay">
+                        <h3>It's Snowing on Mt. Fuji</h3>
+                    </div>
+                </a>
             </div>
-            <div class="column">
-                <div class="image-item">
-                    <img src="../public/images/cocktails/pear_noel_wide.jpg">
-                    <a href="/cocktails/pear_noel">
-                        <div class="overlay">
-                            <h3>Pear Noël</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/tannin_bombs_wide.jpg">
-                    <a href="/cocktails/tannin_bombs">
-                        <div class="overlay">
-                            <h3>The Royal Tannin Bombs</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/high_sobriety.jpg">
-                    <a href="/cocktails/high_sobriety">
-                        <div class="overlay">
-                            <h3>High Sobriety</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <img src="../public/images/cocktails/coconut_mocha_negroni_2.jpg">
-                    <a href="/cocktails/coconut_mocha">
-                        <div class="overlay">
-                            <h3>Coconut Mocha Negroni</h3>
-                        </div>
-                    </a>
-                </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/avochata_wide.jpg">
+                <a href="/cocktails/avochata">
+                    <div class="overlay">
+                        <h3>Avochata</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/honey_shrub.jpg">
+                <a href="/cocktails/honey_shrub">
+                    <div class="overlay">
+                        <h3>Honey, I Shrubbed the Gin</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/mustard_tall.jpg">
+                <a href="/cocktails/colonel_mustard">
+                    <div class="overlay">
+                        <h3>Colonel Mustard in the Conservatory With the Candlestick</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/bumpkin_wide.jpg">
+                <a href="/cocktails/bumpkin">
+                    <div class="overlay">
+                        <h3>Bumpkin Spice Punch</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/tennessillin.jpg">
+                <a href="/cocktails/tennessillin">
+                    <div class="overlay">
+                        <h3>Tennessillin</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/bruto_tall.jpg">
+                <a href="/cocktails/bruto">
+                    <div class="overlay">
+                        <h3>Et tu, Bruto?</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/pear_noel_wide.jpg">
+                <a href="/cocktails/pear_noel">
+                    <div class="overlay">
+                        <h3>Pear Noël</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/tannin_bombs_wide.jpg">
+                <a href="/cocktails/tannin_bombs">
+                    <div class="overlay">
+                        <h3>The Royal Tannin Bombs</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/high_sobriety.jpg">
+                <a href="/cocktails/high_sobriety">
+                    <div class="overlay">
+                        <h3>High Sobriety</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="image-item">
+                <img src="../public/images/cocktails/coconut_mocha_negroni_2.jpg">
+                <a href="/cocktails/coconut_mocha">
+                    <div class="overlay">
+                        <h3>Coconut Mocha Negroni</h3>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -214,8 +206,9 @@
         </ul>
     </footer>
 
+    <script src="../public/js/test.js"></script>
     <script src="../public/js/animations.js"></script>
-    <script src="../public/js/cocktails.js"></script>
+
 </body>
 
 </html>

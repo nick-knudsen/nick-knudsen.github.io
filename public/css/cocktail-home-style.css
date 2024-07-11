@@ -15,21 +15,8 @@ body {
     display: flex;
     flex-direction: column;
 
-
     font-family: 'Space Mono', serif;
     background-color: var(--global-background-color);
-}
-
-header > nav > ul {
-    background: linear-gradient(rgba(255,255,255,1), transparent)
-}
-
-nav a {
-    color: black;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: Tenor Sans;
 }
 
 .hero-image {
@@ -38,26 +25,41 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
     align-items: center;
 
     background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_cocktails_mobile.jpg");
-    background-position-x: 40%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .hero-text {
     padding-top: 14vw;
-    padding-bottom: 25vw;
+    padding-bottom: 20vw;
 
     text-align: center;
     font-size: 1.1em;
     color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    font-family: 'Tenor Sans';
+    font-weight: 600;
+}
+
+div.hero-text>h2 {
+    font-size: 3vw;
+    margin-top: 5vw;
+    margin-bottom: -2vw;
+}
+
 div.hero-text>h1 {
-    margin-top: 10vw;
     font-size: 6vw;
     margin-bottom: 0;
 }
@@ -81,34 +83,45 @@ div.hero-text>p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 
-.columns-container {
+.gallery-controls {
+    display: none;
+}
+
+.image-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 1vw;
     padding: 1%;
-    width: 100%;
-    box-sizing: border-box;
+    list-style-type: none;
 }
 
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.image-item {
+.image-gallery .image-item {
     position: relative;
-    width: 100%;
-    flex-grow: 1;
+    flex: 1 1 auto;
 }
 
-.image-item img {
+.image-gallery img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
+    vertical-align: middle;
     border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-item a {
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
 }
 
 .image-item .overlay {
@@ -125,13 +138,17 @@ div.hero-text>p {
     background-color: rgba(0 ,0, 0, 0.5);
     color: white;
     opacity: 0;
-    font-size: 2em;
     text-align: center;
     z-index: 1;
 }
 
 .image-item .overlay h3 {
     font-family: 'Space Mono', serif;
+}
+
+.image-gallery::after {
+    content: "";
+    flex-grow: 999;
 }
 
 .blurb {
@@ -150,64 +167,58 @@ div.hero-text>p {
     text-align: justify;
 }
 
-/* one column on small screens */
 @media (max-width: 899px) {
+    .hero-image {
+        flex-shrink: 0;
+        background-position-x: 30%;
+    }
+
     .gallery-controls {
         display: flex;
         position: sticky;
         top: 0;
-        justify-content: space-evenly;
-        /* width: 100%; */
+        width: 35%;
+        align-self: center;
+        justify-content: space-between;
         padding: 0.5em;
         z-index: 999;
     }
 
     .gallery-controls button {
         border: none;
+        width: 40px;
+        height: 40px;
         background: none;
         color: white;
         font-size: 1.25em;
         border-radius: 50%;
-        padding: 0.5em;
+        margin-top: 2%;
     }
 
     .gallery-controls button.active {
         background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .column {
-        flex: 1 0 100%;
+    .image-gallery.timeline-view .image-item {
+        height: auto; 
     }
 
-    .image-item .overlay {
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
+    .image-gallery.tile-view .image-item {
+        width: 32vw;
+        height: 32vw;
+        flex: none;
     }
 
-    .image-item .overlay.visible {
-        opacity: 1;
-    }
-
-    .gallery-container.tile-view {
-        gap: 0px;
-    }
-
-    .gallery-container.tile-view .column {
-        flex: 1 0 30vw;
-        align-items: center;
-    }
-
-    .gallery-container.tile-view .overlay {
+    .image-gallery.tile-view .overlay {
         transition: 0s;
     }
 
-    .gallery-container.tile-view .overlay.visible {
+    .image-gallery.tile-view .overlay.visible {
         opacity: 0;
     }
 
-    .gallery-container.tile-view .image-item {
-        width: 30vw;
-        height: 30vw;
+    .image-gallery.timeline-view .overlay.visible {
+        opacity: 1;
     }
 
     .blurb p {
@@ -216,18 +227,23 @@ div.hero-text>p {
         text-align: left;
     }
 }
-/* three columns on large screens */
-@media (min-width: 900px) {
-    .gallery-controls {
-        display: none;
-    }
 
-    .column {
-        flex: 1 0 calc(33.33% - 10px);
-    }
+@media (min-width: 900px) {
     .hero-image {
         background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_cocktails.jpg");
         background-position: bottom;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+        height: 4500px;
+    }
+
+    .image-gallery .image-item {
+        flex-grow: 1;
+        flex-shrink: 0;
+        /* height: auto; */
+        width: 32vw;
     }
 
     .image-item:hover .overlay {
