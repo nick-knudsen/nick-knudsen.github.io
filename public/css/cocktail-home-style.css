@@ -146,10 +146,10 @@ div.hero-text>p {
     font-family: 'Space Mono', serif;
 }
 
-.image-gallery::after {
+/* .image-gallery::after {
     content: "";
     flex-grow: 999;
-}
+} */
 
 .blurb {
     width: 100%;
@@ -237,13 +237,12 @@ div.hero-text>p {
 
     .image-gallery {
         flex-direction: column;
-        height: 4500px;
+        height: 150vw;
     }
 
     .image-gallery .image-item {
         flex-grow: 1;
-        flex-shrink: 0;
-        /* height: auto; */
+        flex-shrink: 1;
         width: 32vw;
     }
 
