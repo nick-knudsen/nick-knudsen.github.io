@@ -34,7 +34,6 @@ links.forEach(link => {
     });
 });
 
-// fade in and slide up
 document.addEventListener("DOMContentLoaded", function() {
     const body = document.body;
     const portrait = document.getElementById('portrait');
@@ -53,11 +52,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                entry.target.classList.remove('hidden');
                 entry.target.classList.add('visible');
             } else {
-                entry.target.classList.remove('visible');
+                    entry.target.classList.remove('visible');
+                    entry.target.classList.add('hidden');
             }
-        });
+        })
     }, observerOptions);
 
     imageOverlays.forEach(overlay => {

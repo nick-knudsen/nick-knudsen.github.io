@@ -134,10 +134,9 @@ div.hero-text>p {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
     background-color: rgba(0 ,0, 0, 0.5);
     color: white;
-    opacity: 0;
     text-align: center;
     z-index: 1;
 }
@@ -220,6 +219,10 @@ div.hero-text>p {
 
     .image-gallery.timeline-view .overlay.visible {
         opacity: 1;
+    }
+
+    .image-gallery.timeline-view .overlay.hidden {
+        opacity: 0;
     }
 
     .blurb p {
