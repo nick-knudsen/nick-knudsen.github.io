@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
         .then(images => {
-            const gallery = document.getElementById('imageGallery');
+            const gallery = document.getElementById('image-gallery');
 
             images.forEach(src => {
                 // Add to gallery
