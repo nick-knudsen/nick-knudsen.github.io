@@ -4,15 +4,15 @@
 
 
 html {
+    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    height: 100%;
     display: flex;
     flex-direction: column;
-
-    margin: 0;
 
     font-family: 'Space Mono', serif;
     background-color: var(--global-background-color);
@@ -26,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(transparent 0%, transparent 70%, var(--global-background-color) 100%), url("../images/hero_code.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 70%, var(--global-background-color) 100%), url("../images/hero_code_2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,6 +115,7 @@ div.hero-text>p {
 .project-overview {
     display: flex;
     flex-direction: column;
+    align-items: center;
     color: white;
     max-width: 75%;
     /* margin: 2em; */
@@ -126,7 +127,7 @@ div.hero-text>p {
 }
 
 .project-text p {
-    margin: 2em;
+    margin-bottom: 1em;
 }
 
 .project-overview button {
@@ -149,4 +150,32 @@ div.hero-text>p {
 
 .project-overview button:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 899px) {
+    .hero-image {
+        flex-shrink: 0;
+    }
+
+    .project-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        width: 100%;
+    }
+
+    .project-overview {
+        max-width: 100%;
+    }
+
+    .project-text {
+        margin: 0;
+        text-align: left;
+    }
+
+    .project-content#autoplay {
+        flex-direction: column-reverse
+    }
 }
