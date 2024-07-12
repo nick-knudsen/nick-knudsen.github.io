@@ -219,7 +219,18 @@ footer>ul .fa {
         padding: 0.5em 1em;
     }
 
-    footer {
+    footer ul {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
         font-size: 1.75rem;
+    }
+
+    footer #copyright {
+        font-size: 2vw;
+    }
+
+    footer li a {
+        text-decoration: none;
     }
 }
