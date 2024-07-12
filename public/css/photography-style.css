@@ -91,7 +91,7 @@ div.hero-text>p {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 1vw;
+    gap: 10px;
     padding: 1%;
     list-style-type: none;
 }
@@ -166,6 +166,9 @@ div.hero-text>p {
         background-color: rgba(0, 0, 0, 0.8);
     }
 
+    .image-gallery {
+        gap: 1vw;
+    }
     .image-gallery.timeline-view li {
         height: auto; 
     }

@@ -177,6 +177,6 @@ div.hero-text>p {
     }
 
     .project-content#autoplay {
-        flex-direction: column-reverseq
+        flex-direction: column-reverse;
     }
 }

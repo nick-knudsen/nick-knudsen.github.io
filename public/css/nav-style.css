@@ -4,7 +4,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    font-size: 1.25em;
+    font-size: 2rem;
     border: inherit;
     z-index: 999999;
     pointer-events: none;
@@ -129,6 +129,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    font-size: 2rem;
 }
 
 footer>ul {
@@ -212,5 +213,9 @@ footer>ul .fa {
 
     header > nav li {
         padding: 0.5em 1em;
+    }
+
+    footer {
+        font-size: 1.75rem;
     }
 }

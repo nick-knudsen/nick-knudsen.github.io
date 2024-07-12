@@ -1,5 +1,6 @@
 :root {
     --global-background-color: #222222;
+    font-size: 62.5%;
 }
 
 html, body {
@@ -28,11 +29,12 @@ body {
 }
 
 .hero-text {
-    padding-top: 14vw;
-    padding-bottom: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     text-align: center;
-    font-size: 1.1em;
     color: white;
 }
 
@@ -48,23 +50,22 @@ h6 {
 }
 
 .hero-text h2 {
-    font-size: 3em;
-    margin-top: 5vw;
-    margin-bottom: -2vw;
+    font-size: 4vw;
+    margin-bottom: -6vw;
 }
 
 .hero-text h1 {
-    font-size: 6em;
+    font-size: 8vw;
     margin-bottom: 0;
 }
 
-div.hero-text>p {
-    font-size: 1.2em;
+.hero-text p {
+    font-size: 1.5vw;
 }
 
 .fa-arrow-circle-down {
     color: white;
-    font-size: 2em;
+    font-size: 3vw;
     text-decoration: none;
     transition-duration: 0.4s;
 }
@@ -89,7 +90,6 @@ div.hero-text>p {
     top: 0;
     height: 100vh;
     color: white;
-
 }
 
 .sticky-half.left {
@@ -103,7 +103,7 @@ div.hero-text>p {
 
 .parallax-section h2 {
     margin-top: auto;
-    font-size: 8em;
+    font-size: 5vw;
     color:white;
     margin-bottom: 0.25em;
 }
@@ -112,10 +112,10 @@ div.hero-text>p {
     background-color: white;
     border: none;
     font-family: inherit;
-    font-size: 1em;
+    font-size: 1vw;
     border-radius: 3em;
-    padding-inline: 2em;
-    padding-block: .75em;
+    padding-inline: 2vw;
+    padding-block: .75vw;
     transition-duration: 0.4s;
 }
 
@@ -133,6 +133,7 @@ div.hero-text>p {
     display: flex;
     justify-content: center;
     width: 100%;
+    font-size: 1vw;
 }
 
 .parallax-section nav > ul {
@@ -210,13 +211,26 @@ div.hero-text>p {
     align-items: center;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3em;
+    font-size: 2vw;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
 #about {
     height: auto;
+}
+
+#about p {
+    padding: 0.5rem;
+    text-align: justify;
+    font-family: 'Ubuntu';
+    font-size: 2rem;
+    line-height: 150%;
+}
+
+#about-text {
+    padding: 2.5vw 5vw 20vw;
+    z-index: 998;
 }
 
 #about > .scrolling-half {
@@ -258,29 +272,25 @@ div.hero-text>p {
     animation: fadeInUp 1.5s ease-in-out;
 }
 
-#about-text {
-    padding: 5em 10em 30em;
-    z-index: 998;
-}
-
-#about p {
-    padding: 1em;
-    text-align: justify;
-    font-size: 1.5em;
-}
-
 @media (max-width: 899px) {
     .hero-image {
         background-position-y: 80%;
     }
 
     .hero-text h2 {
-        font-size: 2em;
-        margin-top: -40%;
+        font-size: 5.5vw;
     }
 
     .hero-text h1 {
-        font-size: 4em;
+        font-size: 11vw;
+    }
+
+    .hero-text p {
+        font-size: 3vw;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 10vw;
     }
 
     .parallax-section {
@@ -289,7 +299,13 @@ div.hero-text>p {
     }
 
     .parallax-section h2 {
-        font-size: 3em;
+        font-size: 7vw;
+        margin-top: 3vw;
+    }
+
+    .parallax-section button {
+        font-size: 5vw;
+        padding-inline: 3vw;
     }
 
     .parallax-section nav {
@@ -327,6 +343,7 @@ div.hero-text>p {
         opacity: 0;
         transition: opacity 1s ease-in-out;
         border-radius: 20px;
+        font-size: 5vw;
     }
 
     .overlay.visible {
@@ -339,11 +356,11 @@ div.hero-text>p {
     }
 
     #about-text {
-        padding: 0;
-        font-size: 0.6em;
+        padding: 0 1rem;
     }
 
     #about p {
         text-align: left;
+        font-size: 1.5rem;
     }
 }
