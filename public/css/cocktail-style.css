@@ -12,6 +12,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: 'Space Mono', serif;
     background-color: var(--global-background-color);
 }
@@ -19,6 +20,9 @@ body {
 .cocktail-photo {
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     z-index: -2;
     background-position: center;
@@ -36,22 +40,21 @@ h2 {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    /* padding-top: 14vw;
-    padding-bottom: 15vw; */
 
     text-align: center;
     font-size: 1.1em;
     color: white;
 }
 
-div.hero-text>h1 {
+.hero-text h1 {
     font-size: 3em;
     margin-bottom: 0;
     margin-top: 0;
 }
 
-div.hero-text>p {
+.hero-text p {
     font-size: 1.2em;
     padding: 1em;
 }
@@ -189,6 +192,10 @@ h2 {
         background-image: url('../../public/images/cocktails/tennessillin.jpg')
     }
 
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
     .prep-list {
         flex-direction: column;
     }
@@ -213,64 +220,59 @@ h2 {
         z-index: -1;
     }
     
-    #overlay_black {
-        background: linear-gradient(to right, black 30%, transparent 35%, transparent 65%, black 70%);
-    }
-    
-    #overlay_white {
-        background: linear-gradient(to right, white 30%, transparent 35%, transparent 65%, white 70%);
-    }
-    
-    #overlay_brown {
-        background: linear-gradient(to right, rgb(59, 40, 10) 30%, transparent 35%, transparent 65%, rgb(59, 40, 10) 70%);
-    
+    #overlay_default {
+        background: linear-gradient(to right, var(--global-background-color) 30%, transparent 35%, transparent 65%, var(--global-background-color) 70%);
     }
 
     #avochata {
-        background-image: url('../../public/images/cocktails/avochata_wide.jpg')
+        background-image: url('../../public/images/cocktails/avochata_wide.jpg');
     }
 
     #bruto {
-        background-image: url('../../public/images/cocktails/bruto_wide.jpg')
+        background-image: url('../../public/images/cocktails/bruto_wide.jpg');
     }
     
     #bumpkin {
-        background-image: url('../../public/images/cocktails/bumpkin_wide.jpg')
+        background-image: url('../../public/images/cocktails/bumpkin_wide.jpg');
     }
 
     #coconut-mocha {
-        background-image: url('../../public/images/cocktails/coconut_mocha_negroni_1.jpg')
+        background-image: url('../../public/images/cocktails/coconut_mocha_negroni_2.jpg');
+        width: 40vw;
     }
 
     #colonel-mustard {
-        background-image: url('../../public/images/cocktails/mustard_wide_1.jpg')
+        background-image: url('../../public/images/cocktails/mustard_wide_1.jpg');
     }
 
     #fjords {
-        background-image: url('../../public/images/cocktails/fjords_wide.jpg')
+        background-image: url('../../public/images/cocktails/fjords_wide.jpg');
     }
 
     #fuji {
-        background-image: url('../../public/images/cocktails/mt_fuji_wide.jpg')
+        background-image: url('../../public/images/cocktails/mt_fuji_wide.jpg');
     }
 
     #high-sobriety {
-        background-image: url('../../public/images/cocktails/high_sobriety.jpg')
+        background-image: url('../../public/images/cocktails/high_sobriety.jpg');
+        width: 40vw;
     }
 
     #honey-shrub {
-        background-image: url('../../public/images/cocktails/honey_shrub.jpg')
+        background-image: url('../../public/images/cocktails/honey_shrub.jpg');
+        width: 40vw;
     }
 
     #pear-noel {
-        background-image: url('../../public/images/cocktails/pear_noel_wide.jpg')
+        background-image: url('../../public/images/cocktails/pear_noel_wide.jpg');
     }
 
     #tannin-bombs {
-        background-image: url('../../public/images/cocktails/tannin_bombs_wide.jpg')
+        background-image: url('../../public/images/cocktails/tannin_bombs_wide.jpg');
     }
 
     #tennessillin {
-        background-image: url('../../public/images/cocktails/tennessillin.jpg')
+        background-image: url('../../public/images/cocktails/tennessillin.jpg');
+        width: 40vw;
     }
 }
