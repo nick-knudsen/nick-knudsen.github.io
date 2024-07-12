@@ -86,42 +86,53 @@ function getScrollbarWidth() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    let scrollElementIndex = 0;
-
-    function getVisibleElementIndex() {
-        const images = document.querySelectorAll('.image-gallery li');
-        for (let i = 0; i < images.length; i++) {
-            const rect = images[i].getBoundingClientRect();
-            if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-                return i;
-            }
+    let isFirstViewChange = true;
+    let scrollOffsetTileView = 0;
+    let scrollOffsetTimelineView = 0;
+    
+    function saveScrollPosition () {
+        if (document.getElementById('tile-view-button').classList.contains('active')) {
+            scrollOffsetTileView = window.scrollY;
         }
-        return 0;
+        if (document.getElementById('timeline-view-button').classList.contains('active')) {
+            scrollOffsetTimelineView = window.scrollY;
+        }
     }
 
-    function scrollToElement(index) {
-        const images = document.querySelectorAll('.image-gallery li');
-        if (images[index]) {
-            images[index].scrollIntoView();
-        }
+    function scrollToLastPosition(offset) {
+        window.scrollTo(0, offset);
     }
 
     function selectTileView() {
-        scrollElementIndex = getVisibleElementIndex();
+        if (document.getElementById('tile-view-button').classList.contains('active')) {
+            return;
+        }
+        saveScrollPosition();
+
         document.querySelector('.image-gallery').classList.remove('timeline-view');
         document.querySelector('.image-gallery').classList.add('tile-view');
         document.getElementById('tile-view-button').classList.add('active');
         document.getElementById('timeline-view-button').classList.remove('active');
-        scrollToElement(scrollElementIndex);
+        
+        scrollToLastPosition(scrollOffsetTileView);
     }
-
+    
     function selectTimelineView() {
-        scrollElementIndex = getVisibleElementIndex();
+        if (document.getElementById('timeline-view-button').classList.contains('active')) {
+            return;
+        }
+        saveScrollPosition();
+
         document.querySelector('.image-gallery').classList.remove('tile-view');
         document.querySelector('.image-gallery').classList.add('timeline-view');
         document.getElementById('timeline-view-button').classList.add('active');
         document.getElementById('tile-view-button').classList.remove('active');
-        scrollToElement(scrollElementIndex);
+        
+        if (isFirstViewChange) {
+            isFirstViewChange = false;
+            return;
+        }
+        scrollToLastPosition(scrollOffsetTimelineView);
     }
 
     // Attach functions to buttons
