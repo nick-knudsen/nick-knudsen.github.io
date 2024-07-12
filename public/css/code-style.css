@@ -23,6 +23,7 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,11 +35,12 @@ body {
 }
 
 .hero-text {
-    padding-top: 14vw;
-    padding-bottom: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     text-align: center;
-    font-size: 1.1em;
     color: white;
 }
 
@@ -53,24 +55,18 @@ h6 {
     font-weight: 600;
 }
 
-div.hero-text>h2 {
-    font-size: 3vw;
-    margin-top: 5vw;
-    margin-bottom: -2vw;
-}
-
-div.hero-text>h1 {
-    font-size: 6vw;
+.hero-text h1 {
+    font-size: 8vw;
     margin-bottom: 0;
 }
 
-div.hero-text>p {
-    font-size: 1.2em;
+.hero-text p {
+    font-size: 1.5vw;
 }
 
 .fa-arrow-circle-down {
     color: white;
-    font-size: 2em;
+    font-size: 5rem;
     text-decoration: none;
     transition-duration: 0.4s;
 }
@@ -89,7 +85,7 @@ div.hero-text>p {
 }
 
 .project-title h2 {
-    font-size: 3em;
+    font-size: 2vw;
     color: white;
     text-align: center;
 }
@@ -129,13 +125,16 @@ div.hero-text>p {
 
 .project-text p {
     margin-bottom: 1em;
+    font-family: 'Ubuntu';
+    font-size: 2rem;
+    line-height: 150%;
 }
 
 .project-overview button {
     background-color: white;
     border: none;
     font-family: inherit;
-    font-size: 1em;
+    font-size: 2.5rem;
     border-radius: 3em;
     padding-inline: 2em;
     padding-block: .75em;
@@ -154,13 +153,25 @@ div.hero-text>p {
 }
 
 @media (max-width: 899px) {
-    .hero-image {
-        flex-shrink: 0;
+    .hero-text h1 {
+        font-size: 11vw;
+    }
+
+    .hero-text p {
+        font-size: 3vw;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 10vw;
     }
 
     .project-content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .project-title h2 {
+        font-size: 7vw;
     }
 
     .project-image {
@@ -174,6 +185,14 @@ div.hero-text>p {
     .project-text {
         margin: 0;
         text-align: left;
+    }
+
+    .project-text p {
+        font-size: 1.5rem;
+    }
+
+    .project-overview button {
+        font-size: 4vw;
     }
 
     .project-content#autoplay {

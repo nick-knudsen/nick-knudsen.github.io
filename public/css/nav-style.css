@@ -119,13 +119,13 @@ header>nav .mobile-icon {
 .menu-options a {
     text-decoration: none;
     font-family: "Space Mono", sans-serif;
-    font-size: 2em;
+    font-size: 10vw;
     color: white;
 }
 
 .close-icon i {
     color: white;
-    font-size: 2em;
+    font-size: 10vw;
     padding-top: 1em;
 }
 
