@@ -22,6 +22,7 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-shrink: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -33,11 +34,12 @@ body {
 }
 
 .hero-text {
-    padding-top: 14vw;
-    padding-bottom: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     text-align: center;
-    font-size: 1.1em;
     color: white;
 }
 
@@ -52,24 +54,19 @@ h6 {
     font-weight: 600;
 }
 
-div.hero-text>h2 {
-    font-size: 3vw;
-    margin-top: 5vw;
-    margin-bottom: -2vw;
-}
 
-div.hero-text>h1 {
-    font-size: 6vw;
+.hero-text h1 {
+    font-size: 8vw;
     margin-bottom: 0;
 }
 
-div.hero-text>p {
-    font-size: 1.2em;
+.hero-text p {
+    font-size: 1.5vw;
 }
 
 .fa-arrow-circle-down {
     color: white;
-    font-size: 2em;
+    font-size: 5rem;
     text-decoration: none;
     transition-duration: 0.4s;
 }
@@ -136,8 +133,19 @@ div.hero-text>p {
 
 @media (max-width: 899px) {
     .hero-image {
-        flex-shrink: 0;
         background-position-x: 30%;
+    }
+
+    .hero-text h1 {
+        font-size: 11vw;
+    }
+
+    .hero-text p {
+        font-size: 3vw;
+    }
+
+    .fa-arrow-circle-down {
+        font-size: 10vw;
     }
 
     .gallery-controls {
@@ -158,7 +166,7 @@ div.hero-text>p {
         height: 40px;
         background: none;
         color: white;
-        font-size: 1.25em;
+        font-size: 2rem;
         border-radius: 50%;
     }
 

@@ -1,6 +1,5 @@
 :root {
     --global-background-color: #222222;
-    font-size: 62.5%;
 }
 
 html, body {
@@ -65,7 +64,7 @@ h6 {
 
 .fa-arrow-circle-down {
     color: white;
-    font-size: 3vw;
+    font-size: 5rem;
     text-decoration: none;
     transition-duration: 0.4s;
 }
